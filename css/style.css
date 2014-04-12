@@ -170,6 +170,7 @@
   }
 }
 
+/* Base Styles  */
 
 body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
@@ -207,4 +208,138 @@ h6,
   width: 100%;
   max-width: 1000px;
   height: auto;
+}
+
+/* NAVBAR */
+
+.navbar-inverse .navbar-collapse {
+  border-color: transparent;
+}
+
+.navbar-inverse {
+  background-color: transparent;
+  border-color: transparent;
+  font-family: 'akzidenz-grotesk_bq_condensBd', Arial, Helvetica, sans-serif;
+}
+
+.navbar-nav {
+  background-color: #c00d0d;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  background-color: #c00d0d;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  background-color: #c00d0d;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: #000;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
+color: #fff;
+background-color: inherit;
+}
+
+.story-cover-wrap {
+  max-width: 100%;
+  width: 100%;
+  height: 720px;
+  min-height: 100%;
+  max-height: none;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.story-cover {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.story-cover-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+}
+
+.story-cover-image::after {
+background-color: rgb(42, 0, 100);
+background-size: 100%;
+background-image: -webkit-linear-gradient(top, rgb(192, 13, 13) 0px, rgb(255, 255, 255) 88%);
+}
+
+.story-cover-image::after {
+content: '';
+display: block;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+z-index: 0;
+opacity: 0.35;
+}
+
+.story-cover-content {
+  position: relative;
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  padding-top: 100px;
+  padding-bottom: 80px;
+  text-align: center;
+  color: #fff;
+}
+
+.story-intro {
+  display: table-row;
+  height: 100%;
+  width: 100%;
+}
+
+.story-intro h1 {
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.story-intro h2 {
+  color: #fff;
+  font-family: 'akzidenz-grotesk_bqregular', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.story-cover-content .post-item-meta-item {
+  display: inline;
+  overflow: visible;
+}
+
+.post-item-meta a{
+  color: #fff;
+}
+
+.post-item-meta-avatar {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 8px;
+  margin-left: auto;
+}
+
+.post-content p {
+  max-width: 80%;
+  margin: 0 auto 20px auto;
 }
