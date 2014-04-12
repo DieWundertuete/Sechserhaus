@@ -268,7 +268,8 @@ background-color: inherit;
   left: 0;
   right: 0;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-color: #000;
 }
 
@@ -339,7 +340,42 @@ opacity: 0.35;
   margin-left: auto;
 }
 
+.blogpost-wrap {
+  margin-bottom: 60px;
+}
+
 .post-content p {
   max-width: 80%;
   margin: 0 auto 20px auto;
+}
+
+.post-content a {
+  color: #c00d0d;
+  font-style: italic;
+}
+
+.post-content img, .post-content pre {
+  margin: 20px auto;
+}
+
+blockquote {
+  text-align: center;
+  border-left: none;
+  font-size: 20px;
+  color: #c00d0d;
+  font-style: italic;
+  margin: 20px auto;
+}
+
+blockquote footer {
+  font-size: 14px;
+  text-align: left;
+  margin-left: 50%;
+  font-style: normal;
+  width: 100%;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
 }
