@@ -244,6 +244,23 @@ color: #fff;
 background-color: inherit;
 }
 
+.space-wrap, .community-wrap {
+  margin-bottom: 60px;
+}
+
+.post-date {
+  width: 10%;
+}
+
+.post-date h4, .post-date h5 {
+  width: 80%;
+}
+
+.media-heading {
+  font-size: 50px;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
+}
+
 .story-cover-wrap {
   max-width: 100%;
   width: 100%;
@@ -378,4 +395,78 @@ blockquote footer {
 .form-horizontal .form-group {
   margin-left: 0;
   margin-right: 0;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid #c00d0d;
+  color: #c00d0d;
+}
+
+.form-control:focus {
+  border: 2px solid #c00d0d;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  font-family: 'akzidenz-grotesk_bq_condensBd', arial, Helvetica, sans-serif;
+  border: 2px solid #c00d0d;
+  border-radius: 0;
+  color: #c00d0d;
+  background-color: #fff;
+  border-color: #c00d0d;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #c00d0d;
+  border-color: #c00d0d;
+}
+
+.carousel-inner > .item > img {
+  max-width: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+.carousel-caption h1 {
+  color: #fff;
+}
+
+.carousel-caption .btn-primary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.carousel-caption .btn-primary:hover,
+.carousel-caption .btn-primary:active {
+  background: #fff;
+  color: #999;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
 }
