@@ -224,15 +224,18 @@ h6,
 
 .navbar-nav {
   background-color: #c00d0d;
+  background-color: rgba(192,13,13,0.75);
 }
 
 .navbar-inverse .navbar-brand {
   color: #fff;
   background-color: #c00d0d;
+  background-color: rgba(192,13,13,0.75);
 }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
   background-color: #c00d0d;
+  background-color: rgba(192,13,13,0.75);
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -240,8 +243,25 @@ h6,
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {
-color: #fff;
-background-color: inherit;
+  color: #fff;
+  background-color: inherit;
+}
+
+.space-wrap, .community-wrap {
+  margin-bottom: 60px;
+}
+
+.post-date {
+  width: 10%;
+}
+
+.post-date h4, .post-date h5 {
+  width: 80%;
+}
+
+.media-heading {
+  font-size: 50px;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
 }
 
 .story-cover-wrap {
@@ -268,26 +288,27 @@ background-color: inherit;
   left: 0;
   right: 0;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   background-color: #000;
 }
 
 .story-cover-image::after {
-background-color: rgb(42, 0, 100);
-background-size: 100%;
-background-image: -webkit-linear-gradient(top, rgb(192, 13, 13) 0px, rgb(255, 255, 255) 88%);
+  background-color: rgb(42, 0, 100);
+  background-size: 100%;
+  background-image: -webkit-linear-gradient(top, rgb(192, 13, 13) 0px, rgb(255, 255, 255) 88%);
 }
 
 .story-cover-image::after {
-content: '';
-display: block;
-width: 100%;
-height: 100%;
-position: absolute;
-top: 0px;
-left: 0px;
-z-index: 0;
-opacity: 0.35;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  opacity: 0.35;
 }
 
 .story-cover-content {
@@ -339,7 +360,139 @@ opacity: 0.35;
   margin-left: auto;
 }
 
+.blogpost-wrap {
+  margin-bottom: 60px;
+}
+
 .post-content p {
   max-width: 80%;
   margin: 0 auto 20px auto;
+}
+
+.post-content a {
+  color: #c00d0d;
+  font-style: italic;
+}
+
+.post-content img, .post-content pre {
+  margin: 20px auto;
+}
+
+blockquote {
+  text-align: center;
+  border-left: none;
+  font-size: 20px;
+  color: #c00d0d;
+  font-style: italic;
+  margin: 20px auto;
+}
+
+blockquote footer {
+  font-size: 14px;
+  text-align: left;
+  margin-left: 50%;
+  font-style: normal;
+  width: 100%;
+}
+
+.form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid #c00d0d;
+  color: #c00d0d;
+}
+
+.form-control:focus {
+  border: 2px solid #c00d0d;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  font-family: 'akzidenz-grotesk_bq_condensBd', arial, Helvetica, sans-serif;
+  border: 2px solid #c00d0d;
+  border-radius: 0;
+  color: #c00d0d;
+  background-color: #fff;
+  border-color: #c00d0d;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #c00d0d;
+  border-color: #c00d0d;
+}
+
+.carousel-inner > .item > img {
+  max-width: auto;
+  width: auto;
+  vertical-align: middle;
+}
+
+.carousel-caption h1 {
+  color: #fff;
+  margin-bottom: 125px;
+  text-shadow: none;
+}
+
+.carousel-caption .btn-primary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.carousel-caption .btn-primary:hover,
+.carousel-caption .btn-primary:active {
+  background: #fff;
+  color: #999;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.svg-overlay {
+  position: absolute;
+  left: 25%;
+  right: 15%;
+  bottom: 20px;
+  z-index: -1;
+  padding: 50px 0;
+}
+
+/*Media Queries*/
+
+@media screen and (min-width: 768px) {
+  .svg-overlay {
+    left: 35%;
+  }
+
+  .carousel-caption h1 {
+    margin-bottom: 110px;
+  }
 }
