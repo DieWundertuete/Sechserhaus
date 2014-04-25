@@ -69,13 +69,15 @@
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: -110px;
+  margin-bottom: 60px;
   margin-top: 70px;
   height: 600px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  bottom: 25%;
+  left: 50%;
 }
 
 /* Declare heights because of positioning of img element */
@@ -153,13 +155,6 @@
     padding-left:  0;
   }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: 1.4;
-  }
-
   .featurette-heading {
     font-size: 50px;
   }
@@ -176,10 +171,10 @@
 body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.42857143;
+  line-height: 1.5555556;
   color: #333;
   background-color: #fff;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 h1,
@@ -200,10 +195,13 @@ h6,
   color: #c00d0d;
 }
 
-hr {
-  background:url(../img/hr.png) no-repeat center -10px;
-  height:30px;
-  border-top: 2px solid #c00d0d;
+a {
+  color: #c00d0d;
+}
+
+a:hover {
+  color: #c00d0d;
+  text-decoration: underline;
 }
 
 /* NAVBAR */
@@ -281,36 +279,119 @@ hr {
 /* END NAVBAR */
 
 .fact-circle {
-  width:50%;
-  margin: 0 auto 20px auto;
-}
-
-.fact-circle:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height:0;
-  padding-bottom: 100%;
-  background: rgba(192,13,13,0.8); 
-  -moz-border-radius: 50%; 
-  -webkit-border-radius: 50%; 
-  border-radius: 50%;
-}
-
-.fact-circle div {
-  float:left;
-  width:100%;
-  padding-top:50%;
-  line-height:1em;
-  margin-top:-0.5em;
-  text-align:center;
-  font-size: 3rem;
+  display: table-cell;
+  width: 230px;
+  height: 230px;
+  background: rgba(192,13,13,0.7);
+  border-radius:50%;
+  text-align: center;
+  vertical-align: middle;
+  word-wrap: white-space;
   color: #fff;
+  line-height: 1;
+  margin: 0 auto;
+}
+
+.fact-content {
+  font-size: 14px;
+  margin: 0;
+}
+
+.fact-heading {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: #fff;
+  margin: 0;
 }
 
 .space-wrap, .community-wrap {
   margin-bottom: 60px;
   z-index: 10;
+}
+
+.interactive-plan {
+  margin-bottom: 40px;
+}
+
+.pricing {
+  padding-left: 0;
+}
+
+.pricing li {
+  float: left;
+  width: 154px;
+  height: 154px;
+  background: #ffe8d2;
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+}
+
+.pricing li:nth-of-type(even){
+  background: #fff3e8;
+}
+
+.pricing li:first-child {
+  background: #fff;
+}
+
+.pricing li hr {
+  width: 25px;
+  border-top: 1px solid #616161;
+}
+
+.pricing-cat-img{
+  position: relative;
+  height: 154px;
+  width: auto;
+}
+
+.pricing-cat-img::after {
+  background-color: rgba(192,13,13,0.7);
+  content: '\A';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.pricing-cat {
+  width: 154px;
+  height: 30px;
+  margin: auto;
+  position: absolute;
+  z-index: 2;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+}
+
+.pricing-header, .pricing-price {
+  color: #c00d0d;
+  font-size: 30px;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+}
+
+.pricing-desc {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #616161;
+}
+
+iframe, object, embed { width: 100%; }
+
+footer p, footer a {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
+  color: #616161;
+}
+
+footer a:hover {
+  color: #616161;
+  text-decoration: underline;
 }
 
 /*blog specific styles*/
@@ -500,9 +581,7 @@ blockquote footer {
 
 /*fade animation*/
 
-.carousel-caption h1 {
-  color: #fff;
-  margin-bottom: 125px;
+.carousel-caption p {
   text-shadow: none;
 }
 
@@ -558,10 +637,6 @@ blockquote footer {
 @media screen and (min-width: 768px) {
   .svg-overlay {
     left: 35%;
-  }
-
-  .carousel-caption h1 {
-    margin-bottom: 110px;
   }
 }
 
