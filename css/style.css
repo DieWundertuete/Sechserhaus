@@ -285,6 +285,8 @@ hr {
   display: table-cell;
   width: 230px;
   height: 230px;
+  min-width: 100px;
+  min-height: 100px;
   background: rgba(192,13,13,0.7);
   border-radius:50%;
   text-align: center;
@@ -397,6 +399,11 @@ hr {
 }
 
 /*community*/
+
+.coworker, .friends, .partners {
+  margin-bottom: 40px;
+}
+
 .view {
   width: 154px;
   height: 154px;
@@ -494,6 +501,7 @@ hr {
 .view hr {
   width: 25px;
   margin: 20px auto;
+  border-color: #fff;
 }
 
 .view p { 
@@ -531,11 +539,11 @@ hr {
   width: 100%;
 }
 .cover1 {
-    float: left;
-    height: 0;
-    padding-bottom: 100%;
-    position: relative;
-    width: 100%;
+  float: left;
+  height: 0;
+  padding-bottom: 100%;
+  position: relative;
+  width: 100%;
 }
 
 
@@ -764,7 +772,7 @@ blockquote footer {
 }
 
 .btn-primary {
-  font-family: 'akzidenz-grotesk_bq_condensBd', arial, Helvetica, sans-serif;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
   border: 2px solid #c00d0d;
   border-radius: 0;
   color: #c00d0d;
