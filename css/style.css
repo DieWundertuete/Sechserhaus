@@ -172,7 +172,7 @@ body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.5555556;
-  color: #333;
+  color: #616161;
   background-color: #fff;
   padding-bottom: 60px;
 }
@@ -189,7 +189,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'akzidenz-grotesk_bq_condensBd', Helvetica, Arial, sans-serif;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.1;
   color: #c00d0d;
@@ -313,11 +313,11 @@ a:hover {
   margin-bottom: 40px;
 }
 
-.pricing {
+.pricing, .partner {
   padding-left: 0;
 }
 
-.pricing li {
+.pricing li, .partner li {
   float: left;
   width: 154px;
   height: 154px;
@@ -327,23 +327,28 @@ a:hover {
   position: relative;
 }
 
-.pricing li:nth-of-type(even){
+.pricing li:nth-of-type(even), .partner li:nth-of-type(even) {
   background: #fff3e8;
 }
 
-.pricing li:first-child {
+.pricing li:first-child, .partner li:first-child {
   background: #fff;
 }
 
-.pricing li hr {
+.pricing li hr, .partner li hr {
   width: 25px;
   border-top: 1px solid #616161;
 }
 
-.pricing-cat-img{
+.pricing-cat-img {
   position: relative;
   height: 154px;
   width: auto;
+}
+
+.partner-img {
+  width: 100px;
+  margin: 40px auto;
 }
 
 .pricing-cat-img::after {
@@ -358,7 +363,7 @@ a:hover {
   right: 0;
 }
 
-.pricing-cat {
+.pricing-cat, .partner-cat{
   width: 154px;
   height: 30px;
   margin: auto;
@@ -368,6 +373,12 @@ a:hover {
   color: #fff;
   font-size: 30px;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+}
+
+.partner-intro {
+  width: 154px;
+  height: 154px;
+  background-color: #c00d0d;
 }
 
 .pricing-header, .pricing-price {
@@ -381,6 +392,133 @@ a:hover {
   font-size: 14px;
   color: #616161;
 }
+
+/*community*/
+.view {
+  width: 154px;
+  height: 154px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.community-cat {
+  background: #c00d0d;
+}
+
+.view .mask, .view .content {
+  width: 154px;
+  height: 154px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.view img {
+  display: block;
+  position: relative;
+  height: 154px;
+  width: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s; 
+}
+
+.view h2 {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+}
+
+.view p {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.view a.info {
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+
+.view a.info:hover {
+  text-decoration: underline;
+}
+
+.view .mask{ 
+  background-color: rgba(192,13,13,.75);
+  opacity:0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.friends .view .mask {
+  background-color: rgba(255,243,232,.75);
+  color: #616161;
+}
+
+.friends .view h2, .friends .view p, .friends .view a.info, .friends .view hr {
+  color: #616161;
+  border-color: #616161;
+}
+
+.view h2{
+  opacity:0;
+  margin: 30px auto 0 auto;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.community-cat h2, .friends .community-cat h2 {
+  color: #fff;
+  font-size: 30px;
+  opacity: 1;
+  -webkit-transition: none;
+  transition: none; 
+  margin: 62px auto;
+}
+
+.view hr {
+  width: 25px;
+  margin: 20px auto;
+}
+
+.view p { 
+  opacity:0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.view a.info { 
+  opacity:0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.view:hover .mask {  
+  opacity:1; 
+}                                                                            
+
+.view:hover h2 { 
+  opacity: 1;
+}
+.view:hover p { 
+  opacity:1; 
+}
+.view:hover a.info { 
+  opacity:1;
+}
+
 
 iframe, object, embed { width: 100%; }
 
@@ -558,7 +696,6 @@ blockquote footer {
 .form-control:focus {
   border: 2px solid #c00d0d;
   outline: 0;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -600,8 +737,6 @@ blockquote footer {
 .carousel-fade .carousel-inner .item {
   opacity: 0;
   -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 .carousel-fade .carousel-inner .active {
