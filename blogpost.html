@@ -25,7 +25,7 @@
 		<body>
 		<div class="navbar-wrapper">
 			<div class="container">
-				<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation">
+				<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation" data-spy="affix" data-offset-top="10">
 					<div class="container">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,14 +34,15 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="index.html">sechserhaus</a>
+						<a class="navbar-brand" href="#myCarousel">sechserhaus</a>
 							</div>
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="space.html">space</a></li>
-									<li><a href="community.html">community</a></li>
+									<li><a href="#space">space</a></li>
+									<li><a href="#pricing">pricing</a></li>
+									<li><a href="#community">community</a></li>
 									<li><a href="blog.html">blog</a></li>
-									<li><a href="#contact">contact</a></li>
+									<li><a href="#kontakt">kontakt</a></li>
 								</ul>
 						</div>
 					</div>
@@ -145,9 +146,13 @@
 					<!-- Placed at the end of the document so the pages load faster -->
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 					<script src="js/bootstrap.min.js"></script>
-					<script src="assets/js/docs.min.js"></script>
+					<script src="js/jquery.scrollTo.min.js"></script>
+					<script src="js/jquery.localScroll.min.js"></script>
 					<script type="text/JavaScript">
 					$(document).ready(function() {
+
+							$('.navbar').localScroll();
+
 						  /* PARALLAX BG COVER */
 						  $('.story-cover-image[data-type="parallax"]').each(function(){
 						    var parallax = $(this); // assigning the objec

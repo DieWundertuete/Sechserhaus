@@ -34,14 +34,15 @@
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand" href="index.html">sechserhaus</a>
+								<a class="navbar-brand" href="#myCarousel">sechserhaus</a>
 							</div>
 							<div class="navbar-collapse collapse">
 								<ul class="nav navbar-nav navbar-right">
-									<li><a href="space.html">space</a></li>
-									<li><a href="community.html">community</a></li>
+									<li><a href="#space">space</a></li>
+									<li><a href="#pricing">pricing</a></li>
+									<li><a href="#community">community</a></li>
 									<li><a href="blog.html">blog</a></li>
-									<li><a href="#contact">contact</a></li>
+									<li><a href="#kontakt">kontakt</a></li>
 								</ul>
 						</div>
 					</div>
@@ -55,7 +56,7 @@
 					<div class="row">
 						<div class="col-sm-9 col-sm-offset-2">
 							<div class="row">
-								<div class="col-sm-2 col-sm-offset-2">
+								<div class="col-sm-2 col-sm-offset-1">
 									<div class="img-responsive img-circle avatar cover cover1" style="background: url(img/5.jpg) no-repeat center center; background-size:cover;">
 									</div>
 								</div>
@@ -72,7 +73,7 @@
 								</div>
 								<hr>
 								<div class="row">
-								<div class="col-sm-2 col-sm-offset-2">
+								<div class="col-sm-2 col-sm-offset-1">
 									<div class="img-responsive img-circle avatar cover cover1" style="background: url(img/5.jpg) no-repeat center center; background-size:cover;">
 									</div>
 								</div>
@@ -89,7 +90,7 @@
 								</div>
 								<hr>
 								<div class="row">
-								<div class="col-sm-2 col-sm-offset-2">
+								<div class="col-sm-2 col-sm-offset-1">
 									<div class="img-responsive img-circle cover cover1" style="background: url(img/11.jpg) no-repeat center center; background-size:cover;">
 									</div>
 								</div>
@@ -132,24 +133,17 @@
 					<!-- Placed at the end of the document so the pages load faster -->
 					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 					<script src="js/bootstrap.min.js"></script>
-					<script src="assets/js/docs.min.js"></script>
-					<script type="text/JavaScript">
+					<script src="js/jquery.scrollTo.min.js"></script>
+					<script src="js/jquery.localScroll.min.js"></script>
+					<script>
 					$(document).ready(function() {
-						  /* PARALLAX BG COVER */
-						  $('.story-cover-image[data-type="parallax"]').each(function(){
-						    var parallax = $(this); // assigning the objec
-						    
-						    $(window).scroll(function() {
-						      var yPos = -($(window).scrollTop() / parallax.data('speed')); 
-						       
-						      // Put together our final background position
-						      var coords = '50% '+ (50 + yPos) + '%';
-						  
-						      // Move the background
-						      parallax.css({"background-position": coords});
-						    }); 
-						  });
-						});
+					  $(window).scroll(function() {
+				    var x = $(this).scrollTop();
+				    $('.parallax').css('top', parseInt(-x / 8) + 'px');
+						}); 
+
+						$('.navbar').localScroll();
+					});
 					</script>
 				</body>
 			</html>

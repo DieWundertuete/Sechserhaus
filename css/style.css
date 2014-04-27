@@ -773,11 +773,13 @@ blockquote footer {
 
 .btn-primary {
   font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
-  border: 2px solid #c00d0d;
+  border: 1px solid #c00d0d;
   border-radius: 0;
   color: #c00d0d;
   background-color: #fff;
   border-color: #c00d0d;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
