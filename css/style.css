@@ -197,6 +197,10 @@ h6,
   color: #c00d0d;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 a {
   color: #c00d0d;
 }
@@ -233,11 +237,21 @@ hr {
   color: #000;
 }
 
+.navbar-logo {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
 .navbar-brand {
   padding: 5px 0 0 0;
   font-size: 24px;
   line-height: 1;
+  height: 30px;
   margin-top: 20px;
+  opacity: 0;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
 }
@@ -274,12 +288,17 @@ hr {
 }
 
 .affix {
-  min-height: 50px;
+  min-height: 30px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
 .affix .nav li a, .affix .navbar-brand {
-  margin-top: 10px;
+  margin: 5px 0;
+  opacity: 1;
+}
+
+.affix .navbar-logo {
+  opacity: 0;
 }
 
 /* END NAVBAR */
@@ -323,6 +342,7 @@ hr {
 
 .pricing, .partner {
   padding-left: 0;
+  margin: 40px 0;
 }
 
 .pricing li, .partner li {
@@ -399,6 +419,10 @@ hr {
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #616161;
+}
+
+.media {
+  margin-bottom: 40px;
 }
 
 /*community*/
@@ -549,6 +573,18 @@ hr {
   width: 100%;
 }
 
+.event h4 {
+  color: #616161;
+}
+
+.event a {
+  color: #616161;
+}
+
+.event .btn-primary {
+  border-color: #616161;
+}
+
 
 iframe, object, embed { width: 100%; }
 
@@ -563,6 +599,10 @@ footer a:hover {
 }
 
 /*blog specific styles*/
+
+.blog-excerpt {
+  margin: 60px 0;
+}
 
 .post-date {
   width: 10%;
@@ -687,7 +727,6 @@ footer a:hover {
 }
 
 .post-content p {
-  max-width: 80%;
   margin: 0 auto 20px auto;
 }
 
@@ -791,12 +830,25 @@ blockquote footer {
 	right: 0;
 	top: 70px;
 }
-#portfolio ul {
+
+.gallery {
+  margin-left: -15%;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+#gallery-space {
+  position: relative;
+  width: 100vw;
+  height: 40vw;
+}
+
+#portfolio ul, #gallery-space ul {
 	position: relative;
 	margin: 0;
 	padding: 0;	
 }
-#portfolio ul li {
+#portfolio ul li, #gallery-space ul li {
 	list-style: none;	
 }
 .port-cont {
@@ -808,10 +860,12 @@ blockquote footer {
 .port-frame {
 	position: absolute;
 	overflow: hidden;
+  height: 20vw;
+  width: 20vw;
 }
 .port-frame img {
-	width: 100%;
-	height: auto;
+	width: auto;
+  max-height: 100%;
 }
 .sechser_ol {
 	opacity: 0;
@@ -878,6 +932,7 @@ blockquote footer {
   border-color: #c00d0d;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  font-size: 18px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
