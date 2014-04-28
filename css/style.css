@@ -37,6 +37,7 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
+
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -174,6 +175,8 @@ body {
   color: #616161;
   background-color: #fff;
   padding-top: 70px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 h1,
@@ -751,6 +754,101 @@ blockquote footer {
 }
 
 /*end blog*/
+
+/** Coworker Detail **/
+/* Coworker, Image */
+.cont-cowrk {
+	position: relative;
+	width: 30vw;
+	height: 30vw;
+	margin: 5vw auto 0;
+}
+
+.img-cowrk {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.55);
+	z-index: 9;
+}
+
+.img-cowrk .img-cowrk-img {
+	position: absolute;
+	width: 85%;
+	height: 85%;
+	margin: 7.5%;
+	z-index: 10;
+}
+.row {
+	clear: both;	
+}
+/* Portfolio, BG */
+#portfolio {
+	position: absolute;
+	width: 100%;
+	height: 20vw;
+	left: 0;
+	right: 0;
+	top: 70px;
+}
+#portfolio ul {
+	position: relative;
+	margin: 0;
+	padding: 0;	
+}
+#portfolio ul li {
+	list-style: none;	
+}
+.port-cont {
+	float: left;
+	position: relative;
+	width: 20%;
+	padding-bottom: 20%;
+}
+.port-frame {
+	position: absolute;
+	overflow: hidden;
+}
+.port-frame img {
+	width: 100%;
+	height: auto;
+}
+.sechser_ol {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	transition: all 0.4s ease 0s;
+
+}
+.port-frame:hover .sechser_ol {
+	opacity: 0.55;
+	transition: all 0.4s ease 0s;
+}
+/*Text*/
+#cowrk-desc h1 {
+	font-size: 2.666666666666667em;
+	margin: 0em 0 -0.4em;
+}
+#cowrk-desc h2 {
+	font-size: 	1.666666666666667em;
+	margin-bottom: 1.5em;
+}
+#cowrk-desc p {
+	margin: 1em;
+}
+#cowrk-desc hr {
+	margin: 3em -1em;
+}
+#cowrk-info {
+	padding: 0 1em 3em;	
+}
+.desc_cont_red {
+	color: #C00D0D;
+	margin-right: 0.2em;
+}
+
+/** end Coworker Detail **/
+
 
 /*Form styles*/
 
