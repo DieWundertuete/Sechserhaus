@@ -347,12 +347,23 @@ hr {
 
 .pricing li, .partner li {
   float: left;
-  width: 154px;
-  height: 154px;
+  width: 20%;
+  padding-bottom: 20%;
   background: #ffe8d2;
   list-style-type: none;
   text-align: center;
   position: relative;
+}
+
+.pricing li:first-of-type {
+	height: 0;
+	width: 40%;
+	padding-bottom: 40%;
+}
+
+#pricing-copy {
+	width: 20%;
+	padding-bottom: 20%;
 }
 
 .pricing li:nth-of-type(even), .partner li:nth-of-type(even) {
@@ -368,10 +379,23 @@ hr {
   border-top: 1px solid #616161;
 }
 
+.pricing-intro {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.pricing-wrap {
+	position: absolute;
+	width: 100%;
+	margin: 8% 0;
+}
+
 .pricing-cat-img {
   position: relative;
-  height: 154px;
-  width: auto;
+  max-height: 100%;
+  min-width: 100%;
 }
 
 .partner-img {
@@ -380,27 +404,27 @@ hr {
 }
 
 .pricing-cat-img::after {
-  background-color: rgba(192,13,13,0.7);
   content: '\A';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 
-.pricing-cat, .partner-cat{
-  width: 154px;
-  height: 30px;
+.pricing-cat, .partner-cat {
+  width: 100%;
+  height: 33%;
   margin: auto;
   position: absolute;
   z-index: 2;
-  top: 0; left: 0; bottom: 0; right: 0;
+	left: 0; bottom: 0; right: 0;
   color: #fff;
   font-size: 30px;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
+}
+
+.pricing-cat-bg, .partner-cat-bg {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color: rgba(192,13,13,0.7);
+	bottom: 0;
 }
 
 .partner-intro {
