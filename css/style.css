@@ -445,6 +445,9 @@ hr {
 }
 
 /*community*/
+#community {
+	margin: 80px 0;
+}
 
 .coworker, .friends, .partners {
   margin-bottom: 40px;
@@ -868,7 +871,7 @@ blockquote footer {
 .row {
 	clear: both;	
 }
-/* Portfolio, BG */
+/* Portfolio & Galerie, BG */
 #portfolio {
 	position: absolute;
 	width: 100%;
@@ -878,16 +881,18 @@ blockquote footer {
 	top: 70px;
 }
 
-.gallery {
-  margin-left: -15%;
-  margin-bottom: 80px;
-  margin-top: 40px;
+#gallery-space {
+  left: 0;
+  position: absolute;
+  width: 100vw;
+	z-index: 8;
 }
 
-#gallery-space {
-  position: relative;
-  width: 100vw;
-  height: 40vw;
+.gallery, #gallery-spacer {
+	position: relative;
+	width: 100%;
+	height: 40vw;
+	margin-bottom: 80px;
 }
 
 #portfolio ul, #gallery-space ul {
@@ -907,8 +912,8 @@ blockquote footer {
 .port-frame {
 	position: absolute;
 	overflow: hidden;
-  height: 20vw;
-  width: 20vw;
+  height: 100%;
+  width: 100%;
 }
 .port-frame img {
 	width: auto;
