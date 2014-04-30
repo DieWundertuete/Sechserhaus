@@ -345,7 +345,7 @@ hr {
   margin: 40px 0;
 }
 
-.pricing li, .partner li {
+.pricing li {
   float: left;
   width: 20%;
   padding-bottom: 20%;
@@ -370,7 +370,7 @@ hr {
   background: #fff3e8;
 }
 
-.pricing li:first-child, .partner li:first-child {
+.pricing li:first-child {
   background: #fff;
 }
 
@@ -386,9 +386,9 @@ hr {
 	overflow: hidden;
 }
 
-.pricing-wrap {
+.pricing-wrap, .partner-wrap {
 	position: absolute;
-	width: 100%;
+	width: 100%; height: 84%;
 	margin: 8% 0;
 }
 
@@ -396,11 +396,6 @@ hr {
   position: relative;
   max-height: 100%;
   min-width: 100%;
-}
-
-.partner-img {
-  width: 100px;
-  margin: 40px auto;
 }
 
 .pricing-cat-img::after {
@@ -455,9 +450,19 @@ hr {
   margin-bottom: 40px;
 }
 
+.coworker ul, .friends ul, .partners ul {
+	margin:0;
+	padding:0;
+}
+
+.coworker ul li, .friends ul li, .partners ul li {
+	list-style: none;
+}
+
 .view {
-  width: 154px;
-  height: 154px;
+  width: 20%;
+	height: 0;
+  padding-bottom: 20%;
   float: left;
   overflow: hidden;
   position: relative;
@@ -465,24 +470,25 @@ hr {
   cursor: default;
 }
 
+.view > * {
+	position: absolute;
+	top: 0; left: 0;
+}
+
 .community-cat {
   background: #c00d0d;
 }
 
-.view .mask, .view .content {
-  width: 154px;
-  height: 154px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
+.view .mask, .view .content, .view > a, .view > .comm-head-wrap {
+  width: 100%;
+	height: 100%;
 }
 
-.view img {
+.view > a > img {
   display: block;
   position: relative;
-  height: 154px;
-  width: auto;
+  max-height: 100%;
+  min-width: 100%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s; 
 }
@@ -533,7 +539,23 @@ hr {
   border-color: #616161;
 }
 
-.view h2{
+.partner-img {
+	top: 50%;
+	left: 50%;
+  max-width: 100%;
+  position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.partner-wrap {
+	margin: 10%;
+	min-height: 80%;
+	max-width: 80%;
+	border
+}
+
+.view h2 {
   opacity:0;
   margin: 30px auto 0 auto;
   -webkit-transition: all 0.3s;
@@ -543,10 +565,11 @@ hr {
 .community-cat h2, .friends .community-cat h2 {
   color: #fff;
   font-size: 30px;
+	height: 20%;
   opacity: 1;
   -webkit-transition: none;
   transition: none; 
-  margin: 62px auto;
+  margin: 50% auto 0;
 }
 
 .view hr {
