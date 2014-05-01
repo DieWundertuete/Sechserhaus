@@ -56,7 +56,6 @@
 
 .carousel {
 	margin-bottom: 60px;
-	margin-top: 70px;
 	height: 600px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -147,7 +146,6 @@ body {
 	font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
 	font-size: 18px;
 	line-height: 1.5555556;
-	padding-bottom: 60px;
 	color: #616161;
 	background-color: #fff;
 	padding-top: 70px;
@@ -296,16 +294,12 @@ hr {
 .interactive-plan {
 	margin-bottom: 40px;
 }
-.pricing {
-	padding-left: 0;
-}
 .pricing,
 .partner {
 	padding-left: 0;
 	margin: 40px 0;
 }
-.pricing li,
-.partner li {
+.pricing li {
 	float: left;
 	width: 20%;
 	padding-bottom: 20%;
@@ -314,13 +308,7 @@ hr {
 	text-align: center;
 	position: relative;
 }
-.pricing li:nth-of-type(even) {
-	background: #fff3e8;
-}
-.pricing li:first-child {
-	background: #fff;
-}
-.pricing li hr {
+.pricing li:first-of-type {
 	height: 0;
 	width: 40%;
 	padding-bottom: 40%;
@@ -340,15 +328,6 @@ hr {
 .partner li hr {
 	width: 25px;
 	border-top: 1px solid #616161;
-}
-.pricing-cat-img {
-	position: relative;
-	height: 154px;
-	width: auto;
-}
-.partner-img {
-	width: 100px;
-	margin: 40px auto;
 }
 .pricing-intro {
 	position: absolute;
