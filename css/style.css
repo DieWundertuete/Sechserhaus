@@ -371,17 +371,22 @@ hr {
   margin: 40px 0;
 }
 
+<<<<<<< HEAD
 .pricing li, .partner li {
 >>>>>>> testing
+=======
+.pricing li {
+>>>>>>> testing
   float: left;
-  width: 154px;
-  height: 154px;
+  width: 20%;
+  padding-bottom: 20%;
   background: #ffe8d2;
   list-style-type: none;
   text-align: center;
   position: relative;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .pricing li:nth-of-type(even){
   background: #fff3e8;
@@ -393,11 +398,24 @@ hr {
 
 .pricing li hr {
 =======
+=======
+.pricing li:first-of-type {
+	height: 0;
+	width: 40%;
+	padding-bottom: 40%;
+}
+
+#pricing-copy {
+	width: 20%;
+	padding-bottom: 20%;
+}
+
+>>>>>>> testing
 .pricing li:nth-of-type(even), .partner li:nth-of-type(even) {
   background: #fff3e8;
 }
 
-.pricing li:first-child, .partner li:first-child {
+.pricing li:first-child {
   background: #fff;
 }
 
@@ -407,6 +425,7 @@ hr {
   border-top: 1px solid #616161;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .pricing-cat-img{
 =======
@@ -422,21 +441,33 @@ hr {
 .partner-img {
   width: 100px;
   margin: 40px auto;
+=======
+.pricing-intro {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.pricing-wrap, .partner-wrap {
+	position: absolute;
+	width: 100%; height: 84%;
+	margin: 8% 0;
+}
+
+.pricing-cat-img {
+  position: relative;
+  max-height: 100%;
+  min-width: 100%;
+>>>>>>> testing
 }
 
 >>>>>>> testing
 .pricing-cat-img::after {
-  background-color: rgba(192,13,13,0.7);
   content: '\A';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .pricing-cat {
 =======
@@ -444,17 +475,33 @@ hr {
 >>>>>>> testing
   width: 154px;
   height: 30px;
+=======
+.pricing-cat, .partner-cat {
+  width: 100%;
+  height: 33%;
+>>>>>>> testing
   margin: auto;
   position: absolute;
   z-index: 2;
-  top: 0; left: 0; bottom: 0; right: 0;
+	left: 0; bottom: 0; right: 0;
   color: #fff;
   font-size: 30px;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+.pricing-cat-bg, .partner-cat-bg {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	background-color: rgba(192,13,13,0.7);
+	bottom: 0;
+}
+
+>>>>>>> testing
 .partner-intro {
   width: 154px;
   height: 154px;
@@ -481,14 +528,27 @@ hr {
 }
 
 /*community*/
+#community {
+	margin: 80px 0;
+}
 
 .coworker, .friends, .partners {
   margin-bottom: 40px;
 }
 
+.coworker ul, .friends ul, .partners ul {
+	margin:0;
+	padding:0;
+}
+
+.coworker ul li, .friends ul li, .partners ul li {
+	list-style: none;
+}
+
 .view {
-  width: 154px;
-  height: 154px;
+  width: 20%;
+	height: 0;
+  padding-bottom: 20%;
   float: left;
   overflow: hidden;
   position: relative;
@@ -496,24 +556,25 @@ hr {
   cursor: default;
 }
 
+.view > * {
+	position: absolute;
+	top: 0; left: 0;
+}
+
 .community-cat {
   background: #c00d0d;
 }
 
-.view .mask, .view .content {
-  width: 154px;
-  height: 154px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
+.view .mask, .view .content, .view > a, .view > .comm-head-wrap {
+  width: 100%;
+	height: 100%;
 }
 
-.view img {
+.view > a > img {
   display: block;
   position: relative;
-  height: 154px;
-  width: auto;
+  max-height: 100%;
+  min-width: 100%;
   -webkit-transition: all 0.4s;
   transition: all 0.4s; 
 }
@@ -564,7 +625,23 @@ hr {
   border-color: #616161;
 }
 
-.view h2{
+.partner-img {
+	top: 50%;
+	left: 50%;
+  max-width: 100%;
+  position: absolute;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.partner-wrap {
+	margin: 10%;
+	min-height: 80%;
+	max-width: 80%;
+	border
+}
+
+.view h2 {
   opacity:0;
   margin: 30px auto 0 auto;
   -webkit-transition: all 0.3s;
@@ -574,10 +651,11 @@ hr {
 .community-cat h2, .friends .community-cat h2 {
   color: #fff;
   font-size: 30px;
+	height: 20%;
   opacity: 1;
   -webkit-transition: none;
   transition: none; 
-  margin: 62px auto;
+  margin: 50% auto 0;
 }
 
 .view hr {
@@ -877,7 +955,7 @@ blockquote footer {
 .row {
 	clear: both;	
 }
-/* Portfolio, BG */
+/* Portfolio & Galerie, BG */
 #portfolio {
 	position: absolute;
 	width: 100%;
@@ -887,16 +965,18 @@ blockquote footer {
 	top: 70px;
 }
 
-.gallery {
-  margin-left: -15%;
-  margin-bottom: 80px;
-  margin-top: 40px;
+#gallery-space {
+  left: 0;
+  position: absolute;
+  width: 100vw;
+	z-index: 8;
 }
 
-#gallery-space {
-  position: relative;
-  width: 100vw;
-  height: 40vw;
+.gallery, #gallery-spacer {
+	position: relative;
+	width: 100%;
+	height: 40vw;
+	margin-bottom: 80px;
 }
 
 #portfolio ul, #gallery-space ul {
@@ -916,8 +996,8 @@ blockquote footer {
 .port-frame {
 	position: absolute;
 	overflow: hidden;
-  height: 20vw;
-  width: 20vw;
+  height: 100%;
+  width: 100%;
 }
 .port-frame img {
 	width: auto;
