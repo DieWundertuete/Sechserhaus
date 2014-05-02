@@ -42,22 +42,30 @@
 					"featureType": "road",
 					"elementType": "geometry",
 					"stylers": [
-						{ "color": "#c00d0d" },
-						{ "visibility": "on" }
+						{
+							"color": "#c00d0d"
+						},
+						{
+							"visibility": "on"
+						}
 					]
-				}, 
+				},
 				{
 					"featureType": "landscape",
 					"elementType": "geometry",
 					"stylers": [
-						{ "color": "#fef3e8" }
+						{
+							"color": "#fef3e8"
+						}
 					]
-				}, 
+				},
 				{
 					"featureType": "water",
 					"elementType": "geometry",
 					"stylers": [
-						{ "hue": "#00c3ff"}
+						{
+							"hue": "#00c3ff"
+						}
 					]
 				}
 				];
@@ -71,7 +79,7 @@
 				},
 				mapTypeId: MY_MAPTYPE_ID
 			};
-			
+
 			var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
 			var marker = new google.maps.Marker({
@@ -778,6 +786,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
 	<script src="js/jquery.localScroll.min.js"></script>
+	<!--
 	<script>
 		$(document).ready(function () {
 			$(window).scroll(function () {
@@ -787,6 +796,113 @@
 
 			$('.navbar').localScroll();
 		});
+	</script>
+-->
+	<script>
+		// requestAnimationFrame Polyfill
+		(function () {
+			var lastTime = 0;
+			var vendors = ['ms', 'moz', 'webkit', 'o'];
+			for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+			}
+
+			if (!window.requestAnimationFrame) window.requestAnimationFrame = function (callback, element) {
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+				var id = window.setTimeout(function () {
+						callback(currTime + timeToCall);
+					},
+					timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+
+			if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) {
+				clearTimeout(id);
+			};
+		}());
+
+		var $content = $('.parallax'),
+			wHeight = $(window).height();
+
+		$(window).on('resize', function () {
+			wHeight = $(window).height();
+		});
+
+		/**
+		 * requestAnimationFrame Shim
+		 */
+		window.requestAnimFrame = (function () {
+			return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function (callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+		})();
+
+		/**
+		 * Scroller
+		 */
+		function Scroller() {
+			this.latestKnownScrollY = 0;
+			this.ticking = false;
+		}
+
+		Scroller.prototype = {
+			/**
+			 * Initialize
+			 */
+			init: function () {
+				window.addEventListener('scroll', this.onScroll.bind(this), false);
+			},
+
+			/**
+			 * Capture Scroll
+			 */
+			onScroll: function () {
+				this.latestKnownScrollY = window.scrollY;
+				this.requestTick();
+			},
+
+			/**
+			 * Request a Tick
+			 */
+			requestTick: function () {
+				if (!this.ticking) {
+					window.requestAnimFrame(this.update.bind(this));
+				}
+				this.ticking = true;
+			},
+
+			/**
+			 * Update.
+			 */
+			update: function () {
+				var currentScrollY = this.latestKnownScrollY;
+				this.ticking = false;
+
+				/**
+				 * Do The Dirty Work Here
+				 */
+				var slowScroll = currentScrollY / 4;
+
+				$content.css({
+					'transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)',
+					'-moz-transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)',
+					'-webkit-transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)'
+				});
+
+			}
+		};
+
+		/**
+		 * Attach!
+		 */
+		var scroller = new Scroller();
+			scroller.init();
 	</script>
 </body>
 
