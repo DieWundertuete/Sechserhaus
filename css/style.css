@@ -139,7 +139,7 @@
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-
+	
   /* Remove the edge padding needed for mobile */
   .marketing {
     padding-right: 0;
@@ -156,7 +156,7 @@
   }
 
   .featurette-heading {
-    font-size: 50px;
+    font-size: 2.77777778em;
   }
 }
 
@@ -168,9 +168,14 @@
 
 /* Base Styles  */
 
+html {
+	font-size: 16px;
+}
+
 body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
-  font-size: 18px;
+	font-size: 1.125em;
+  /*font-size: 18px;*/
   line-height: 1.5555556;
   color: #616161;
   background-color: #fff;
@@ -198,7 +203,7 @@ h6,
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 2.77777778em;
 }
 
 a {
@@ -247,7 +252,7 @@ hr {
 
 .navbar-brand {
   padding: 5px 0 0 0;
-  font-size: 24px;
+  font-size: 1.33333333em;
   line-height: 1;
   height: 30px;
   margin-top: 20px;
@@ -267,7 +272,7 @@ hr {
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 1.33333333em;
 
 }
 
@@ -320,13 +325,13 @@ hr {
 }
 
 .fact-content {
-  font-size: 14px;
+  font-size: 0.77777778em;
   margin: 0;
 }
 
 .fact-heading {
   font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
-  font-size: 100px;
+  font-size: 5.55555556em;
   color: #fff;
   margin: 0;
 }
@@ -410,7 +415,7 @@ hr {
   z-index: 2;
 	left: 0; bottom: 0; right: 0;
   color: #fff;
-  font-size: 30px;
+  font-size: 1.66666667em;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
 }
 
@@ -430,13 +435,13 @@ hr {
 
 .pricing-header, .pricing-price {
   color: #c00d0d;
-  font-size: 30px;
+  font-size: 1.66666667em;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
 }
 
 .pricing-desc {
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 0.77777778em;
   color: #616161;
 }
 
@@ -496,20 +501,15 @@ hr {
   transition: all 0.4s; 
 }
 
-.view h2 {
+.view h2, .view p {
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
   color: #fff;
   text-align: center;
   position: relative;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .view p {
-  font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  position: relative;
-  color: #fff;
-  text-align: center;
   margin: 0 auto;
 }
 
@@ -517,7 +517,7 @@ hr {
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
   display: inline-block;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 0.77777778em;
   color: #fff;
 }
 
@@ -567,7 +567,7 @@ hr {
 
 .community-cat h2, .friends .community-cat h2 {
   color: #fff;
-  font-size: 30px;
+  font-size: 1.66666667em;
 	height: 20%;
   opacity: 1;
   -webkit-transition: none;
@@ -672,7 +672,7 @@ footer a:hover {
 }
 
 .media-heading {
-  font-size: 50px;
+  font-size: 2.77777778em;
   font-family: 'akzidenz-grotesk_bq_light_cRg', arial, Helvetica, sans-serif;
 }
 
@@ -740,18 +740,15 @@ footer a:hover {
   width: 100%;
 }
 
-.story-intro h1 {
+.story-intro h1, .story-intro h {
   color: #fff;
-  font-size: 50px;
+  font-size: 2.77777778em;
   line-height: 1.1;
   margin-bottom: 8px;
 }
 
 .story-intro h2 {
-  color: #fff;
   font-family: 'akzidenz-grotesk_bqregular', Arial, Helvetica, sans-serif;
-  font-size: 30px;
-  line-height: 1.1;
 }
 
 .story-cover-content .post-item-meta-item {
@@ -792,14 +789,14 @@ footer a:hover {
 blockquote {
   text-align: center;
   border-left: none;
-  font-size: 20px;
+  font-size: 1.11111111em;
   color: #c00d0d;
   font-style: italic;
   margin: 20px auto;
 }
 
 blockquote footer {
-  font-size: 14px;
+  font-size: 0.77777778em;
   text-align: left;
   margin-left: 50%;
   font-style: normal;
@@ -936,7 +933,7 @@ blockquote footer {
 	margin: 0em 0 -0.4em;
 }
 #cowrk-desc h2 {
-	font-size: 	1.666666666666667em;
+	font-size: 1.666666666666667em;
 	margin-bottom: 1.5em;
 }
 #cowrk-desc p {
@@ -984,7 +981,7 @@ blockquote footer {
   border-color: #c00d0d;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
@@ -1037,7 +1034,7 @@ blockquote footer {
 
 /*end fade */
 
-/*Media Queries*/
+/**Media Queries**/
 @media screen and (min-width: 1500px) {
   .carousel {
     height: 750px;
@@ -1079,4 +1076,17 @@ blockquote footer {
   .navbar-nav>li {
       float: left;
   }
+}
+
+/*Font-sizes*/
+@media screen and (max-width: 991px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	html {
+		font-size: 13px;
+	}
 }
