@@ -34,21 +34,59 @@
 	</script>
 	<script type="text/javascript">
 		function initialize() {
+			var MY_MAPTYPE_ID = 'custom_style';
 			var myLatlng = new google.maps.LatLng(47.071898, 15.437549);
+
+			var featureOpts = [
+				{
+					"featureType": "road",
+					"elementType": "geometry",
+					"stylers": [
+						{ "color": "#c00d0d" },
+						{ "visibility": "on" }
+					]
+				}, 
+				{
+					"featureType": "landscape",
+					"elementType": "geometry",
+					"stylers": [
+						{ "color": "#fef3e8" }
+					]
+				}, 
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [
+						{ "hue": "#00c3ff"}
+					]
+				}
+				];
 
 			var mapOptions = {
 				zoom: 15,
 				center: myLatlng,
-				animation: google.maps.Animation.DROP,
-				scrollwheel: false
-			}
+				scrollwheel: false,
+				mapTypeControlOptions: {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+				},
+				mapTypeId: MY_MAPTYPE_ID
+			};
+			
 			var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 
 			var marker = new google.maps.Marker({
 				position: myLatlng,
 				map: map,
-				title: 'Hello World!'
+				animation: google.maps.Animation.DROP,
 			});
+
+			var styledMapOptions = {
+				name: 'sechserhaus'
+			};
+
+			var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+			map.mapTypes.set(MY_MAPTYPE_ID, customMapType)
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
@@ -700,13 +738,17 @@
 		<div class="map-container">
 			<div class="contact-info">
 				<div class="pull-left logo-container">
-					<img src="img/SH_Logo_quer.png" alt="">
+					<a href="index.html">
+						<img src="img/SH_Logo_quer.png" alt="Logo sechserhaus">
+					</a>
 				</div>
 				<div class="pull-right info-container transparent">
 					<p>8010 Graz/Hauptplatz</p>
 					<p>Sackstrasse 6</p>
-					<p>T +43 316 82 82 82-0</p>
-					<p>info@sechserhaus.net</p>
+					<p><a href="tel:+433168282820">T +43 316 82 82 82-0</a>
+					</p>
+					<p><a href="mailto:info@sechserhaus.net">info@sechserhaus.net</a>
+					</p>
 				</div>
 			</div>
 			<div id="map_canvas" style="width:100%; height:100%"></div>
