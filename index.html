@@ -1,669 +1,922 @@
 <!doctype html>
 <html lang="de">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="shortcut icon" href="img/favicon.ico">
-<title>sechserhaus, coworking space</title>
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<title>sechserhaus coworking space</title>
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<!-- Just for debugging purposes. Don't actually copy this line! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-<!-- Custom styles for this template -->
-<style id="holderjs-style" type="text/css"></style>
+	<!-- Custom styles for this template -->
+	<style id="holderjs-style" type="text/css"></style>
+	<style>
+		html,
+		body,
+		#map-canvas {
+			height: 100%;
+			margin: 0px;
+			padding: 0px
+		}
+	</style>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoTW3IdFVkGnEVoao_5PSUf_bZOo1hIus&sensor=true">
+	</script>
+	<script type="text/javascript">
+		function initialize() {
+			var MY_MAPTYPE_ID = 'custom_style';
+			var myLatlng = new google.maps.LatLng(47.071898, 15.437549);
+
+			var featureOpts = [
+				{
+					"featureType": "road",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#c00d0d"
+						},
+						{
+							"visibility": "on"
+						}
+					]
+				},
+				{
+					"featureType": "landscape",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"color": "#fef3e8"
+						}
+					]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [
+						{
+							"hue": "#00c3ff"
+						}
+					]
+				}
+				];
+
+			var mapOptions = {
+				zoom: 15,
+				center: myLatlng,
+				scrollwheel: false,
+				mapTypeControlOptions: {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
+				},
+				mapTypeId: MY_MAPTYPE_ID
+			};
+
+			var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				animation: google.maps.Animation.DROP,
+			});
+
+			var styledMapOptions = {
+				name: 'sechserhaus'
+			};
+
+			var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
+
+			map.mapTypes.set(MY_MAPTYPE_ID, customMapType)
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <!-- NAVBAR
 	================================================== -->
+
 <body>
-<div class="navbar-wrapper">
-	<div class="container">
-		<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation" data-spy="affix" data-offset-top="10">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-					<a class="navbar-brand" href="index.html#myCarousel">sechserhaus</a> <a class="navbar-logo" href="index.html#myCarousel"><img src="img/logo_hoch.png" alt=""></a> </div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html#space">space</a></li>
-						<li><a href="index.html#pricing">pricing</a></li>
-						<li><a href="index.html#community">community</a></li>
-						<li><a href="blog.html">blog</a></li>
-						<li><a href="#kontakt">kontakt</a></li>
-					</ul>
+	<div class="navbar-wrapper">
+		<div class="container">
+			<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation" data-spy="affix" data-offset-top="10">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
+						</button>
+						<a class="navbar-brand" href="index.html#myCarousel">sechserhaus</a> 
+						<a class="navbar-logo" href="index.html#myCarousel">
+							<img src="img/logo_hoch.png" alt="">
+						</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="index.html#space">space</a>
+							</li>
+							<li><a href="index.html#pricing">pricing</a>
+							</li>
+							<li><a href="index.html#community">community</a>
+							</li>
+							<li><a href="blog.html">blog</a>
+							</li>
+							<li><a href="#kontakt">kontakt</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- Carousel
+	<!-- Carousel
 		================================================== -->
-<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel"> 
-	<!-- Indicators -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-		<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-		<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-	</ol>
-	<div class="carousel-inner">
-		<div class="item next left"> <img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
-			<div class="container">
-				<div class="carousel-caption">
-					<div class="fact-circle">
-						<p class="fact-heading">3000</p>
-						<p class="fact-content">Straßenbahnen, die täglich<br>
-							den Hauptplatz queren</p>
+	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="item next left">
+				<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
+				<div class="container">
+					<div class="carousel-caption">
+						<div class="fact-circle">
+							<p class="fact-heading">3000</p>
+							<p class="fact-content">Straßenbahnen, die täglich
+								<br>den Hauptplatz queren</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive parallax" src="img/5.jpg" alt="">
+				<div class="container">
+					<div class="carousel-caption">
+						<div class="fact-circle">
+							<p class="fact-heading">65</p>
+							<p class="fact-content">Bildschirmdiagonale des Full-
+								<br>HD-Monitors im Studio in Zoll</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item active left">
+				<img class="img-responsive parallax" src="img/10.jpg" alt="">
+				<div class="container">
+					<div class="carousel-caption">
+						<div class="fact-circle">
+							<p class="fact-heading">340</p>
+							<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,
+								<br>Bastelplätze und Dusche</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="item"> <img class="img-responsive parallax" src="img/5.jpg" alt="">
-			<div class="container">
-				<div class="carousel-caption">
-					<div class="fact-circle">
-						<p class="fact-heading">65</p>
-						<p class="fact-content">Bildschirmdiagonale des Full-<br>
-							HD-Monitors im Studio in Zoll</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="item active left"> <img class="img-responsive parallax" src="img/10.jpg" alt="">
-			<div class="container">
-				<div class="carousel-caption">
-					<div class="fact-circle">
-						<p class="fact-heading">340</p>
-						<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,<br>
-							Bastelplätze und Dusche</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
 	</div>
-	<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> --> 
-</div>
-<!-- /.carousel --> 
-<!-- Marketing messaging and featurettes
-			================================================== --> 
-<!-- Wrap the rest of the page in another container to center all the content. -->
-<div class="container"> 
-	<!-- three circles below the carousel -->
-	<div class="row"><!-- Row for events and blogs -->
-		<div class="col-md-5 col-md-offset-1"><!-- blogs -->
-			<ul class="media-list">
-				<li class="media"> <a class="pull-left" href="#"> <img class="media-object img-circle" src="img/portrait_01.jpg" style="width: 64px; height: 64px;"> </a>
-					<div class="media-body">
-						<p class="post-meta"> Heimo Lercher am 22. April 2014 </p>
-						<a href="blogpost.html">
-						<h4 class="media-heading">Weit hinten, hinter den Wortbergen</h4>
+	<!-- /.carousel -->
+	<!-- Marketing messaging and featurettes
+			================================================== -->
+	<!-- Wrap the rest of the page in another container to center all the content. -->
+	<div class="container">
+		<!-- three circles below the carousel -->
+		<div class="row">
+			<!-- Row for events and blogs -->
+			<div class="col-md-5 col-md-offset-1">
+				<!-- blogs -->
+				<ul class="media-list">
+					<li class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object img-circle" src="img/portrait_01.jpg" style="width: 64px; height: 64px;">
 						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum. </p>
-						<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> </div>
-				</li>
-				<li class="media"> <a class="pull-left" href="#"> <img class="media-object img-circle" src="img/portrait_02.jpg" style="width: 64px; height: 64px;"> </a>
-					<div class="media-body">
-						<p class="post-meta"> Heimo Lercher am 22. April 2014 in Blog </p>
-						<a href="blogpost.html">
-						<h4 class="media-heading">Die Hügel des Kursivgebirges</h4>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum. </p>
-						<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> </div>
-				</li>
-			</ul>
-		</div>
-		<!-- ende blogs -->
-		
-		<div class="col-md-5"><!-- events -->
-			<ul class="media-list event">
-				<li class="media"> <a class="pull-left" href="#"> <img class="media-object img-circle" src="img/portrait_03.jpg" style="width: 64px; height: 64px;"> </a>
-					<div class="media-body">
-						<p class="post-meta"> sechserhaus-event </p>
-						<a href="blogpost.html">
-						<h4 class="media-heading">Linolschnitt-Workshop im sechserhaus</h4>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum. </p>
-						<a href="blogpost.html" class="btn btn-primary">mehr infos</a> </div>
-				</li>
-				<li class="media"> <a class="pull-left" href="#"> <img class="media-object img-circle" src="img/portrait_04.jpg" style="width: 64px; height: 64px;"> </a>
-					<div class="media-body">
-						<p class="post-meta"> sechserhaus-event </p>
-						<a href="blogpost.html">
-						<h4 class="media-heading">Kühle Drinks beim Sommerfest</h4>
-						</a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum. </p>
-						<a href="blogpost.html" class="btn btn-primary">mehr infos</a> </div>
-				</li>
-			</ul>
-		</div>
-		<!--  end events --> 
-	</div>
-	<!--  end row for blog and events -->
-	
-	<div id="space" class="row"> 
-		<!--				<div class="col-sm-8 col-sm-offset-2">
-					<h1>space</h1>
-				</div>-->
-		<div id="gallery-space">
-			<ul class="row gallery clearfix">
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/1.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/4.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/7.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/3.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/8.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/11.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/14.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/17.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/13.jpg" /> </div>
-				</li>
-				<li class="port-cont">
-					<div class="port-frame">
-						<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
-						</object>
-						<img src="img/18.jpg" /> </div>
-				</li>
-			</ul>
-		</div>
-		<div id="gallery-spacer"></div>
-		<div class="container">
-			<div class="col-md-12">
-				<div class="col-sm-8 col-sm-offset-2 interactive-plan"> <img src="img/plan.png" width="500" class="img-responsive"alt="interaktiver plan des secherhaus coworking space"> </div>
-				<div class="col-md-5 col-md-offset-1">
-					<p>Die im 12. Jhd. angelegte Sackstraße am Fuß des Schloßbergs ist die älteste Straße von Graz. Das Haus Nr. 6 hat Medientradition: Es war über Generationen die Adresse des 1791 gegründeten Verlages J. A. Kienreich.<br>
-						<br>
-						Das Sechserhaus liegt im historischen Stadtkern, dem UNESCO-Welterbe. Die Grazer Altstadt ist aber kein Architekturmuseum, sondern ein lebendiges Zentrum mit gemütlichen Restaurants, Cafés und Gastgärten.<br>
-						<br>
-						Nur wenige Gehminuten vom Sechserhaus finden sich viele kreative und kulturelle Hot Spots: Kunsthaus, Joanneumsviertel, Stadtmuseum, Galerien, das Schauspielhaus, den Congress Graz und das Landeszeughaus.<br>
-						<br>
-						Das Sechserhaus liegt gleich beim Hauptplatz. Von dort fahren täglich über 3.000 Straßenbahnen ab. Fahrrad-Abstellplatz und eine Ladezone gibt es direkt vorm Haus, vis à vis die schönste Tiefgarage der Stadt für 600 Autos.</p>
-				</div>
-				<div class="col-md-5">
-					<p>Das Sechserhaus vereint das historische Graz mit der modernen Creative City von heute. Das denkmalgeschützte Gebäude wurde im 16. Jahrhundert errichtet, der Coworking Space ist 2012 entstanden.<br>
-						<br>
-						So lässt sich’s arbeiten: lärmabsorbierende Decken und Böden, ergonomische Tische und Drehstühle, abschließbare Rollis, High Speed Internet und VoIP. Zwei Kaffeeküchen, Acht-Zonen-Klimaanlage und ... eine Dusche.<br>
-						<br>
-						Meetings, Workshops, Brainstormings oder Präsentationen brauchen andere Raumsituationen als konzentriertes Arbeiten. Deshalb hat im Sechserhaus jeder Raum sein eigenes Flair.<br>
-						<br>
-						Flexibler Konferenzraum bis 18 Personen mit mobilem 65“ Flatscreen, HD-Beamer, 240cm-Motor-Leinwand, Sat-TV, DVD/BluRay, Surround Sound Dolby 5.1, Verdunkelung, Air Condition, modulares Mobiliar.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="pricing" class="row">
-		<div class="container">
-			<div class="col-sm-12">
-				<div class="col-sm-10 col-sm-offset-1"> 
-					<!--<h1>pricing</h1>-->
-					<ul class="pricing clearfix">
-						<li>
-							<div class="pricing-intro"> <img class="pricing-cat-img" src="img/3.jpg" alt="" />
-								<div class="pricing-cat-bg"></div>
-								<p class="pricing-cat">space</p>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">Month</div>
-								<div class="pricing-desc">Fix Desk &bull; 24/7</div>
-								<hr>
-								<div class="pricing-price">300,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">20 Days</div>
-								<div class="pricing-desc">Flex Desk &bull; Mo-Fr 8-17</div>
-								<hr>
-								<div class="pricing-price">250,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">5 Days</div>
-								<div class="pricing-desc">Flex Desk &bull; Mo-Fr 8-17</div>
-								<hr>
-								<div class="pricing-price">80,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">1 Day</div>
-								<div class="pricing-desc">Flex Desk &bull; 8-17</div>
-								<hr>
-								<div class="pricing-price">20,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">Flex Card</div>
-								<div class="pricing-desc">10 days, free choice, prepay</div>
-								<hr>
-								<div class="pricing-price">180,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">Single Office</div>
-								<div class="pricing-desc">room &bull; 24/7</div>
-								<hr>
-								<div class="pricing-price">500,-</div>
-							</div>
-						</li>
-					</ul>
-					<p>Der Raum ist mit Akustikdecke, indirekter Beleuchtung, Teppichboden und Air Condition ausgestattet. Jedem Coworker stehen zudem ein Schreibtisch mit Soft-Light-Lampe, ein 9-fach verstellbarer Bürostuhl mit Lumbalstütze und ein versperrbarer Rolli zur Verfügung. Dazu gehören selbstverständlich Highspeed-Internet, LAN + W-LAN und optionale VoIP-Telefonie. Für die gemeinsame Nutzung finden sich außerdem Drucker/Kopierer (Fair Use), eine Briefing Lounge, Bastelplätze, Kaffeeküchen, und eine Dusche im sechserhaus.</p>
-				</div>
-				<div class="col-sm-10 col-sm-offset-1">
-					<ul class="pricing clearfix">
-						<li>
-							<div class="pricing-intro"> <img class="pricing-cat-img" src="img/10.jpg" alt="" />
-								<div class="pricing-cat-bg"></div>
-								<p class="pricing-cat">studio</p>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">1 hour</div>
-								<div class="pricing-desc">anytime</div>
-								<hr>
-								<div class="pricing-price">30,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">morning</div>
-								<div class="pricing-desc">8-12</div>
-								<hr>
-								<div class="pricing-price">100,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">afternoon</div>
-								<div class="pricing-desc">13-17</div>
-								<hr>
-								<div class="pricing-price">100,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">day</div>
-								<div class="pricing-desc">8-17</div>
-								<hr>
-								<div class="pricing-price">180,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">evening</div>
-								<div class="pricing-desc">18-22</div>
-								<hr>
-								<div class="pricing-price">120,-</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">late-night</div>
-								<div class="pricing-desc">18-24</div>
-								<hr>
-								<div class="pricing-price">180,-</div>
-							</div>
-						</li>
-					</ul>
-					<p>Das Studio bietet Kapazitäten für Konferenzen bis 18 Personen, Kinobestuhlung für bis zu 30 Personen oder an Stehtischen für bis zu 40 Personen. Der Raum ist mit Akustikdecke, indirekter Beleuchtung, Teppichboden, Air Condition und Komplettverdunkelung ausgestattet und bietet Tische mit variabler Größe (320–560x160 cm), Rolltische (80x80 cm) und höhenverstellbare Konferenzsessel. Auch technisch bleiben keine Wünsche offen: DLP-Projektor (Deckeninstallation), elektrische Leinwand, optionale Komplettverdunkelung, Medienbully, MacBook Pro 2,2 GHz inkl. Funkfernbedienung, Dolby 5.1 – Surround Sound (Deckenlautsprecher + Subwoofer), BluRay-/DVD-Player, Digitaler SAT-Empfang, mobiler 65“-Full-HD-Monitor, HDMI-Hub, Highspeed-Internet über WLAN (Gastnetz). Für die Moderation stehen außerdem Flipcharts, Pinwände, Charts-Butler und Moderationskoffer zur Verfügung.</p>
-				</div>
-				<div class="col-sm-10 col-sm-offset-1">
-					<ul class="pricing clearfix">
-						<li id="pricing-copy">
-							<div class="pricing-intro"> <img class="pricing-cat-img" src="img/20.jpg" alt="" />
-								<div class="pricing-cat-bg"></div>
-								<p class="pricing-cat">print &amp; copy</p>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">A4 SW</div>
-								<div class="pricing-desc"></div>
-								<hr>
-								<div class="pricing-price">0,20</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">A4 color</div>
-								<div class="pricing-desc"></div>
-								<hr>
-								<div class="pricing-price">0,35</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">A3 SW</div>
-								<div class="pricing-desc">Spezialpapier 100g</div>
-								<hr>
-								<div class="pricing-price">0,35</div>
-							</div>
-						</li>
-						<li>
-							<div class="pricing-wrap">
-								<div class="pricing-header">A3 color</div>
-								<div class="pricing-desc">Spezialpapier 100g</div>
-								<hr>
-								<div class="pricing-price">0,70</div>
-							</div>
-						</li>
-					</ul>
-					<p>Spezialpapiere und Mengenkopien über 100 Stk. nach Sondervereinbarung alle Preise in Euro exkl. 20 % MwSt.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="community" class="row">
-		<div class="container">
-			<div class="col-sm-10 col-sm-offset-1 coworker clearfix">
-			<!--<h1>community</h1>-->
-			<ul>
-				<li class="view community-cat">
-					<div class="comm-head-wrap">
-						<h2>coworker</h2>
-					</div>
-				</li>
-				<a href="coworker.html">
-				<li class="view"> <img src="img/1.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/6.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/4.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/20.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/12.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/18.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/3.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/2.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a> <a href="coworker.html">
-				<li class="view"> <img src="img/9.jpg" />
-					<div class="mask">
-						<h2>Thomas Mirnig</h2>
-						<hr>
-						<p>Meister aller Klassen</p>
-						<a href="#" class="info">Website</a> </div>
-				</li>
-				</a>
-				</div>
-			</ul>
-			<div class="col-sm-10 col-sm-offset-1 friends clearfix">
-				<ul>
-					<li class="view community-cat">
-						<h2>friends</h2>
-					</li>
-					<a href="coworker.html">
-					<li class="view"> <img src="img/18.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/3.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/2.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/9.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/18.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/10.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/2.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/9.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/18.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/2.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/6.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a> <a href="coworker.html">
-					<li class="view"> <img src="img/11.jpg" />
-						<div class="mask">
-							<h2>Thomas Mirnig</h2>
-							<hr>
-							<p>Meister aller Klassen</p>
-							<a href="#" class="info">Website</a> </div>
-					</li>
-					</a>
-				</ul>
-			</div>
-			<div class="col-sm-10 col-sm-offset-1 partners clearfix">
-				<ul class="partner clearfix">
-					<li class="view community-cat">
-						<div class="comm-head-wrap">
-							<h2>partners</h2>
+						<div class="media-body">
+							<p class="post-meta">Heimo Lercher am 22. April 2014</p>
+							<a href="blogpost.html">
+								<h4 class="media-heading">Weit hinten, hinter den Wortbergen</h4>
+							</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
+							<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> 
 						</div>
 					</li>
-					<li class="view">
-						<div class="partner-wrap"><img class="partner-img" src="img/10.jpg" alt="" /></div>
-					</li>
-					<li class="view">
-						<div class="partner-wrap"><img class="partner-img" src="img/2.jpg" alt="" /></div>
-					</li>
-					<li class="view">
-						<div class="partner-wrap"><img class="partner-img" src="img/3.jpg" alt="" /></div>
-					</li>
-					<li class="view">
-						<div class="partner-wrap"><img class="partner-img" src="img/8.jpg" alt="" /></div>
+					<li class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object img-circle" src="img/portrait_02.jpg" style="width: 64px; height: 64px;">
+						</a>
+						<div class="media-body">
+							<p class="post-meta">Heimo Lercher am 22. April 2014 in Blog</p>
+							<a href="blogpost.html">
+								<h4 class="media-heading">Die Hügel des Kursivgebirges</h4>
+							</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
+							<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> 
+						</div>
 					</li>
 				</ul>
 			</div>
+			<!-- ende blogs -->
+
+			<div class="col-md-5">
+				<!-- events -->
+				<ul class="media-list event">
+					<li class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object img-circle" src="img/portrait_03.jpg" style="width: 64px; height: 64px;">
+						</a>
+						<div class="media-body">
+							<p class="post-meta">sechserhaus-event</p>
+							<a href="blogpost.html">
+								<h4 class="media-heading">Linolschnitt-Workshop im sechserhaus</h4>
+							</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
+							<a href="blogpost.html" class="btn btn-primary">mehr infos</a> 
+						</div>
+					</li>
+					<li class="media">
+						<a class="pull-left" href="#">
+							<img class="media-object img-circle" src="img/portrait_04.jpg" style="width: 64px; height: 64px;">
+						</a>
+						<div class="media-body">
+							<p class="post-meta">sechserhaus-event</p>
+							<a href="blogpost.html">
+								<h4 class="media-heading">Kühle Drinks beim Sommerfest</h4>
+							</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
+							<a href="blogpost.html" class="btn btn-primary">mehr infos</a> 
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--  end events -->
 		</div>
-	</div>
-</div>
-<!-- /.container -->
-<div id="kontakt" class="row"><!-- footer -->
-	<div class="container">
-		<div class="col-sm-12">
-			<div class="col-sm-10 col-sm-offset-1"> 
-				<!--<h1>kontakt</h1>--> 
+		<!--  end row for blog and events -->
+
+		<div id="space" class="row space">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="col-sm-8 col-sm-offset-2">
+						<!--<h1>space</h1>-->
+					</div>
+					<div class="col-sm-12">
+						<div class="row gallery">
+							<div id="gallery-space">
+								<ul class="clearfix">
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/1.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/4.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/7.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/3.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/8.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/11.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/14.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/17.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/13.jpg" />
+										</div>
+									</li>
+									<li class="port-cont">
+										<div class="port-frame">
+											<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
+											</object>
+											<img src="img/18.jpg" />
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-8 col-sm-offset-2 interactive-plan">
+						<img src="img/plan.png" width="500" class="img-responsive" alt="interaktiver plan des secherhaus coworking space">
+					</div>
+					<div class="col-md-5 col-md-offset-1">
+						<p>Die im 12. Jhd. angelegte Sackstraße am Fuß des Schloßbergs ist die älteste Straße von Graz. Das Haus Nr. 6 hat Medientradition: Es war über Generationen die Adresse des 1791 gegründeten Verlages J. A. Kienreich.
+							<br>
+							<br>Das Sechserhaus liegt im historischen Stadtkern, dem UNESCO-Welterbe. Die Grazer Altstadt ist aber kein Architekturmuseum, sondern ein lebendiges Zentrum mit gemütlichen Restaurants, Cafés und Gastgärten.
+							<br>
+							<br>Nur wenige Gehminuten vom Sechserhaus finden sich viele kreative und kulturelle Hot Spots: Kunsthaus, Joanneumsviertel, Stadtmuseum, Galerien, das Schauspielhaus, den Congress Graz und das Landeszeughaus.
+							<br>
+							<br>Das Sechserhaus liegt gleich beim Hauptplatz. Von dort fahren täglich über 3.000 Straßenbahnen ab. Fahrrad-Abstellplatz und eine Ladezone gibt es direkt vorm Haus, vis à vis die schönste Tiefgarage der Stadt für 600 Autos.</p>
+					</div>
+					<div class="col-md-5">
+						<p>Das Sechserhaus vereint das historische Graz mit der modernen Creative City von heute. Das denkmalgeschützte Gebäude wurde im 16. Jahrhundert errichtet, der Coworking Space ist 2012 entstanden.
+							<br>
+							<br>So lässt sich’s arbeiten: lärmabsorbierende Decken und Böden, ergonomische Tische und Drehstühle, abschließbare Rollis, High Speed Internet und VoIP. Zwei Kaffeeküchen, Acht-Zonen-Klimaanlage und ... eine Dusche.
+							<br>
+							<br>Meetings, Workshops, Brainstormings oder Präsentationen brauchen andere Raumsituationen als konzentriertes Arbeiten. Deshalb hat im Sechserhaus jeder Raum sein eigenes Flair.
+							<br>
+							<br>Flexibler Konferenzraum bis 18 Personen mit mobilem 65“ Flatscreen, HD-Beamer, 240cm-Motor-Leinwand, Sat-TV, DVD/BluRay, Surround Sound Dolby 5.1, Verdunkelung, Air Condition, modulares Mobiliar.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="pricing" class="row">
+			<div class="container">
+				<div class="col-sm-12">
+					<div class="col-sm-10 col-sm-offset-1">
+						<!--<h1>pricing</h1>-->
+						<ul class="pricing clearfix">
+							<li>
+								<div class="pricing-intro">
+									<img class="pricing-cat-img" src="img/3.jpg" alt="" />
+									<div class="pricing-cat-bg"></div>
+									<p class="pricing-cat">space</p>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">Month</div>
+									<div class="pricing-desc">Fix Desk &bull; 24/7</div>
+									<hr>
+									<div class="pricing-price">300,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">20 Days</div>
+									<div class="pricing-desc">Flex Desk &bull; Mo-Fr 8-17</div>
+									<hr>
+									<div class="pricing-price">250,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">5 Days</div>
+									<div class="pricing-desc">Flex Desk &bull; Mo-Fr 8-17</div>
+									<hr>
+									<div class="pricing-price">80,–</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">1 Day</div>
+									<div class="pricing-desc">Flex Desk &bull; 8-17</div>
+									<hr>
+									<div class="pricing-price">20,–</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">Flex Card</div>
+									<div class="pricing-desc">10 days, free choice, prepay</div>
+									<hr>
+									<div class="pricing-price">180,–</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">Single Office</div>
+									<div class="pricing-desc">room &bull; 24/7</div>
+									<hr>
+									<div class="pricing-price">500,–</div>
+								</div>
+							</li>
+						</ul>
+						<p>Der Raum ist mit Akustikdecke, indirekter Beleuchtung, Teppichboden und Air Condition ausgestattet. Jedem Coworker stehen zudem ein Schreibtisch mit Soft-Light-Lampe, ein 9-fach verstellbarer Bürostuhl mit Lumbalstütze und ein versperrbarer Rolli zur Verfügung. Dazu gehören selbstverständlich Highspeed-Internet, LAN + W-LAN und optionale VoIP-Telefonie. Für die gemeinsame Nutzung finden sich außerdem Drucker/Kopierer (Fair Use), eine Briefing Lounge, Bastelplätze, Kaffeeküchen, und eine Dusche im sechserhaus.</p>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<ul class="pricing clearfix">
+							<li>
+								<div class="pricing-intro">
+									<img class="pricing-cat-img" src="img/10.jpg" alt="" />
+									<div class="pricing-cat-bg"></div>
+									<p class="pricing-cat">studio</p>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">1 hour</div>
+									<div class="pricing-desc">anytime</div>
+									<hr>
+									<div class="pricing-price">30,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">morning</div>
+									<div class="pricing-desc">8-12</div>
+									<hr>
+									<div class="pricing-price">100,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">afternoon</div>
+									<div class="pricing-desc">13-17</div>
+									<hr>
+									<div class="pricing-price">100,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">day</div>
+									<div class="pricing-desc">8-17</div>
+									<hr>
+									<div class="pricing-price">180,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">evening</div>
+									<div class="pricing-desc">18-22</div>
+									<hr>
+									<div class="pricing-price">120,-</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">late-night</div>
+									<div class="pricing-desc">18-24</div>
+									<hr>
+									<div class="pricing-price">180,-</div>
+								</div>
+							</li>
+						</ul>
+						<p>Das Studio bietet Kapazitäten für Konferenzen bis 18 Personen, Kinobestuhlung für bis zu 30 Personen oder an Stehtischen für bis zu 40 Personen. Der Raum ist mit Akustikdecke, indirekter Beleuchtung, Teppichboden, Air Condition und Komplettverdunkelung ausgestattet und bietet Tische mit variabler Größe (320–560x160 cm), Rolltische (80x80 cm) und höhenverstellbare Konferenzsessel. Auch technisch bleiben keine Wünsche offen: DLP-Projektor (Deckeninstallation), elektrische Leinwand, optionale Komplettverdunkelung, Medienbully, MacBook Pro 2,2 GHz inkl. Funkfernbedienung, Dolby 5.1 – Surround Sound (Deckenlautsprecher + Subwoofer), BluRay-/DVD-Player, Digitaler SAT-Empfang, mobiler 65“-Full-HD-Monitor, HDMI-Hub, Highspeed-Internet über WLAN (Gastnetz). Für die Moderation stehen außerdem Flipcharts, Pinwände, Charts-Butler und Moderationskoffer zur Verfügung.</p>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1">
+						<ul class="pricing clearfix">
+							<li id="pricing-copy">
+								<div class="pricing-intro">
+									<img class="pricing-cat-img" src="img/20.jpg" alt="" />
+									<div class="pricing-cat-bg"></div>
+									<p class="pricing-cat">print &amp; copy</p>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">A4 SW</div>
+									<div class="pricing-desc"></div>
+									<hr>
+									<div class="pricing-price">0,20</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">A4 color</div>
+									<div class="pricing-desc"></div>
+									<hr>
+									<div class="pricing-price">0,35</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">A3 SW</div>
+									<div class="pricing-desc">Spezialpapier 100g</div>
+									<hr>
+									<div class="pricing-price">0,35</div>
+								</div>
+							</li>
+							<li>
+								<div class="pricing-wrap">
+									<div class="pricing-header">A3 color</div>
+									<div class="pricing-desc">Spezialpapier 100g</div>
+									<hr>
+									<div class="pricing-price">0,70</div>
+								</div>
+							</li>
+						</ul>
+						<p>Spezialpapiere und Mengenkopien über 100 Stk. nach Sondervereinbarung alle Preise in Euro exkl. 20 % MwSt.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="community" class="row">
+			<div class="container">
+				<div class="col-sm-12">
+					<div class="col-sm-10 col-sm-offset-1 coworker clearfix">
+						<!--<h1>community</h1>-->
+						<div class="view community-cat">
+							<h2>coworker</h2>
+						</div>
+						<a href="coworker.html">
+							<div class="view">
+								<img src="img/1.jpg" />
+								<div class="mask">
+									<h2>Thomas Mirnig</h2>
+									<hr>
+									<p>Meister aller Klassen</p>
+									<a href="#" class="info">Website</a> 
+								</div>
+							</div>
+						</a>
+						<div class="view">
+							<img src="img/6.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/4.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/20.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/12.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/18.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/3.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/2.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/9.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/8.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1 friends clearfix">
+						<div class="view community-cat">
+							<h2>friends</h2>
+						</div>
+						<div class="view">
+							<img src="img/20.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/12.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/18.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/3.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/2.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/9.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+						<div class="view">
+							<img src="img/8.jpg" />
+							<div class="mask">
+								<h2>Thomas Mirnig</h2>
+								<hr>
+								<p>Meister aller Klassen</p>
+								<a href="#" class="info">Website</a> 
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-10 col-sm-offset-1 partners clearfix">
+						<ul class="partner clearfix">
+							<li>
+								<div class="partner-intro">
+									<p class="partner-cat">partners</p>
+								</div>
+							</li>
+							<li>
+								<img class="partner-img" src="img/10.jpg" alt="" />
+							</li>
+							<li>
+								<img class="partner-img" src="img/5.jpg" alt="" />
+							</li>
+							<li>
+								<img class="partner-img" src="img/2.jpg" alt="" />
+							</li>
+							<li>
+								<img class="partner-img" src="img/13.jpg" alt="" />
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.385782549409!2d15.4375495!3d47.07189789999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e3582742905d5%3A0x62ffdae652218fb7!2sSackstra%C3%9Fe+6!5e0!3m2!1sen!2sat!4v1398447664135" width="100%" height="600" frameborder="0" style="border:0"></iframe>
-</div>
-<div class="container">
-	<div class="row"><!-- footer section -->
-		
-		<div class="col-md-4"> </div>
-		<div class="col-md-4"> </div>
-		<div class="col-md-4"> </div>
-	</div>
-	<!-- FOOTER -->
-	<footer>
-		<div class="col-sm-8 col-sm-offset-2">
-			<p class="pull-right"><a href="#">Impressum</a> · <a href="#">AGB</a> · <a href="#">FAQ</a> · <a href="#">Kontakt</a></p>
-			<p>&copy; 2014 sechserhaus - creative coworking space</p>
-		</div>
-	</footer>
-</div>
-<!-- Bootstrap core JavaScript
-					================================================== --> 
-<!-- Placed at the end of the document so the pages load faster --> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/jquery.scrollTo.min.js"></script> 
-<script src="js/jquery.localScroll.min.js"></script> 
-<script>
-					$(document).ready(function() {
-					  $(window).scroll(function() {
-				    var x = $(this).scrollTop();
-				    $('.parallax').css('top', parseInt(-x / 8) + 'px');
-						}); 
+	<!-- /.container -->
+	<div id="kontakt" class="row">
+		<!-- footer -->
+		<div class="container">
 
-						$('.navbar').localScroll();
-					});
-					</script>
+			<div class="col-sm-12">
+				<div class="col-sm-10 col-sm-offset-1">
+					<!--<h1>kontakt</h1>-->
+				</div>
+			</div>
+		</div>
+		<div class="map-container">
+			<div class="contact-info">
+				<div class="pull-left logo-container">
+					<a href="index.html">
+						<img src="img/SH_Logo_quer.png" alt="Logo sechserhaus">
+					</a>
+				</div>
+				<div class="pull-right info-container transparent">
+					<p>8010 Graz/Hauptplatz</p>
+					<p>Sackstrasse 6</p>
+					<p><a href="tel:+433168282820">T +43 316 82 82 82-0</a>
+					</p>
+					<p><a href="mailto:info@sechserhaus.net">info@sechserhaus.net</a>
+					</p>
+				</div>
+			</div>
+			<div id="map_canvas" style="width:100%; height:100%"></div>
+		</div>
+	</div>
+		<div class="row">
+			<!-- footer section -->
+
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-4"></div>
+		</div>
+		<!-- FOOTER -->
+		<footer>
+			<div class="col-sm-10 col-sm-offset-1">
+				<div class="col-sm-4">
+					<p>&copy; 2014 sechserhaus - creative coworking space</p>
+				</div>
+				<div class="col-sm-4 social-media-bar text-center">
+					<a href="#">
+						<img src="img/facebook.jpg" alt="facebook">
+					</a>
+					<a href="">
+						<img src="img/youtube.jpg" alt="youtube">
+					</a>
+					<a href="">
+						<img src="img/google.jpg" alt="google">
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<p><a href="#">Impressum</a> · <a href="#">AGB</a> · <a href="#">FAQ</a> · <a href="#">Kontakt</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Bootstrap core JavaScript
+					================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script src="js/jquery.localScroll.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			//			$(window).scroll(function () {
+			//				var x = $(this).scrollTop();
+			//				$('.parallax').css('top', parseInt(-x / 8) + 'px');
+			//			});
+			$('.navbar').localScroll();
+		});
+	</script>
+	<script>
+		// requestAnimationFrame Polyfill
+		(function () {
+			var lastTime = 0;
+			var vendors = ['ms', 'moz', 'webkit', 'o'];
+			for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+			}
+
+			if (!window.requestAnimationFrame) window.requestAnimationFrame = function (callback, element) {
+				var currTime = new Date().getTime();
+				var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+				var id = window.setTimeout(function () {
+						callback(currTime + timeToCall);
+					},
+					timeToCall);
+				lastTime = currTime + timeToCall;
+				return id;
+			};
+
+			if (!window.cancelAnimationFrame) window.cancelAnimationFrame = function (id) {
+				clearTimeout(id);
+			};
+		}());
+
+		var $content = $('.parallax'),
+			wHeight = $(window).height();
+
+		$(window).on('resize', function () {
+			wHeight = $(window).height();
+		});
+
+		/**
+		 * requestAnimationFrame Shim
+		 */
+		window.requestAnimFrame = (function () {
+			return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function (callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+		})();
+
+		/**
+		 * Scroller
+		 */
+		function Scroller() {
+			this.latestKnownScrollY = 0;
+			this.ticking = false;
+		}
+
+		Scroller.prototype = {
+			/**
+			 * Initialize
+			 */
+			init: function () {
+				window.addEventListener('scroll', this.onScroll.bind(this), false);
+			},
+
+			/**
+			 * Capture Scroll
+			 */
+			onScroll: function () {
+				this.latestKnownScrollY = window.scrollY;
+				this.requestTick();
+			},
+
+			/**
+			 * Request a Tick
+			 */
+			requestTick: function () {
+				if (!this.ticking) {
+					window.requestAnimFrame(this.update.bind(this));
+				}
+				this.ticking = true;
+			},
+
+			/**
+			 * Update.
+			 */
+			update: function () {
+				var currentScrollY = this.latestKnownScrollY;
+				this.ticking = false;
+
+				/**
+				 * Do The Dirty Work Here
+				 */
+				var slowScroll = currentScrollY / 4;
+
+				$content.css({
+					'transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)',
+					'-moz-transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)',
+					'-webkit-transform': 'translate3d(0px, -' + slowScroll + 'px, 0px)'
+				});
+
+			}
+		};
+
+		/**
+		 * Attach!
+		 */
+		var scroller = new Scroller();
+		scroller.init();
+	</script>
 </body>
+
 </html>
