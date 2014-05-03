@@ -483,7 +483,11 @@ hr {
 	top: 0; left: 0;
 }
 
-.community-cat {
+li.view {
+  background: #ffe8d2;
+}
+
+li.community-cat {
   background: #c00d0d;
 }
 
