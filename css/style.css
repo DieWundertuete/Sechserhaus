@@ -68,10 +68,17 @@
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+/* Carousel wrap */
+#carousel-wrap {
+	position: relative;
+	width: 100%;
+	padding-bottom: 660px;
+}
+
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
-  height: 600px;
+  height: 100%;
+	width: 100%;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -82,7 +89,13 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  background-color: #777;
+  /*background-color: #777;*/
+  height: 600px;
+  overflow: hidden;
+}
+
+#Carousel_facts .carousel-inner {
+  /*background-color: #777;*/
   height: 600px;
   overflow: hidden;
 }
@@ -1087,7 +1100,9 @@ blockquote footer {
   .carousel {
     height: 750px;
   }
-  
+	#carousel-wrap {
+		padding-bottom: 810px;
+	}
   .carousel .item {
     height: 750px;
   }

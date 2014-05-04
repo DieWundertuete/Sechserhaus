@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<link rel="shortcut icon" href="assets/ico/favicon.ico">
+	<link rel="shortcut icon" href="img/favicon.ico">
 	<title>sechserhaus coworking space</title>
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -30,8 +30,7 @@
 			padding: 0px
 		}
 	</style>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoTW3IdFVkGnEVoao_5PSUf_bZOo1hIus&sensor=true">
-	</script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoTW3IdFVkGnEVoao_5PSUf_bZOo1hIus&sensor=true"></script>
 	<script type="text/javascript">
 		function initialize() {
 			var MY_MAPTYPE_ID = 'custom_style';
@@ -111,8 +110,8 @@
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
 						</button>
-						<a class="navbar-brand" href="index.html#myCarousel">sechserhaus</a> 
-						<a class="navbar-logo" href="index.html#myCarousel">
+						<a class="navbar-brand" href="index.html#Carousel_bilder">sechserhaus</a> 
+						<a class="navbar-logo" href="index.html#Carousel_bilder">
 							<img src="img/logo_hoch.png" alt="">
 						</a>
 					</div>
@@ -134,57 +133,80 @@
 			</div>
 		</div>
 	</div>
-	<!-- Carousel
-		================================================== -->
-	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="item next left">
-				<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">3000</p>
-							<p class="fact-content">Straßenbahnen, die täglich
-								<br>den Hauptplatz queren</p>
-						</div>
-					</div>
+	<div id="carousel-wrap">
+		<!-- Carousel Bilder
+			================================================== -->
+		<div id="Carousel_bilder" class="carousel slide carousel-fade" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#Carousel_bilder" data-slide-to="0" class=""></li>
+				<li data-target="#Carousel_bilder" data-slide-to="1" class=""></li>
+				<li data-target="#Carousel_bilder" data-slide-to="2" class=""></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item next left">
+					<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
+				</div>
+				<div class="item">
+					<img class="img-responsive parallax" src="img/5.jpg" alt="">
+				</div>
+				<div class="item active left">
+					<img class="img-responsive parallax" src="img/10.jpg" alt="">
 				</div>
 			</div>
-			<div class="item">
-				<img class="img-responsive parallax" src="img/5.jpg" alt="">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">65</p>
-							<p class="fact-content">Bildschirmdiagonale des Full-
-								<br>HD-Monitors im Studio in Zoll</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item active left">
-				<img class="img-responsive parallax" src="img/10.jpg" alt="">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">340</p>
-							<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,
-								<br>Bastelplätze und Dusche</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<!-- <a class="left carousel-control" href="#Carousel_bilder" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#Carousel_bilder" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
 		</div>
-		<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+		<!-- /.carousel -->
+		<!-- Carousel Factboxes
+			================================================== -->
+		<div id="Carousel_facts" class="carousel slide carousel-fade" data-ride="carousel">
+			<!-- Indicators
+			<ol class="carousel-indicators">
+				<li data-target="#Carousel_facts" data-slide-to="0" class=""></li>
+				<li data-target="#Carousel_facts" data-slide-to="1" class=""></li>
+				<li data-target="#Carousel_facts" data-slide-to="2" class=""></li>
+			</ol> -->
+			<div class="carousel-inner">
+				<div class="item next left">
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="fact-circle">
+								<p class="fact-heading">3000</p>
+								<p class="fact-content">Straßenbahnen, die täglich
+									<br>den Hauptplatz queren</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="fact-circle">
+								<p class="fact-heading">65</p>
+								<p class="fact-content">Bildschirmdiagonale des Full-
+									<br>HD-Monitors im Studio in Zoll</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item active left">
+					<div class="container">
+						<div class="carousel-caption">
+							<div class="fact-circle">
+								<p class="fact-heading">340</p>
+								<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,
+									<br>Bastelplätze und Dusche</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <a class="left carousel-control" href="#Carousel_facts" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#Carousel_facts" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+		</div>
+		<!-- /.carousel -->
 	</div>
-	<!-- /.carousel -->
 	<!-- Marketing messaging and featurettes
 			================================================== -->
 	<!-- Wrap the rest of the page in another container to center all the content. -->
@@ -921,6 +943,16 @@
 		 */
 		var scroller = new Scroller();
 		scroller.init();
+	</script>
+	<script> //Delay Carousels
+		$(document).ready(function () {
+			$('#Carousel_bilder').carousel({
+				pause:'', interval: 2000				
+			});
+			$('#Carousel_facts').carousel({
+				pause:'', interval: 4000				
+			});
+		});
 	</script>
 </body>
 
