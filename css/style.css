@@ -145,7 +145,7 @@
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-	
+  
   /* Remove the edge padding needed for mobile */
   .marketing {
     padding-right: 0;
@@ -175,12 +175,12 @@
 /* Base Styles  */
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
-	font-size: 1.125em;
+  font-size: 1.125em;
   /*font-size: 18px;*/
   line-height: 1.5555556;
   color: #616161;
@@ -367,14 +367,14 @@ hr {
 }
 
 .pricing li:first-of-type {
-	height: 0;
-	width: 40%;
-	padding-bottom: 40%;
+  height: 0;
+  width: 40%;
+  padding-bottom: 40%;
 }
 
 #pricing-copy {
-	width: 20%;
-	padding-bottom: 20%;
+  width: 20%;
+  padding-bottom: 20%;
 }
 
 .pricing li:nth-of-type(even), .partner li:nth-of-type(even) {
@@ -391,16 +391,16 @@ hr {
 }
 
 .pricing-intro {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .pricing-wrap, .partner-wrap {
-	position: absolute;
-	width: 100%; height: 84%;
-	margin: 8% 0;
+  position: absolute;
+  width: 100%; height: 84%;
+  margin: 8% 0;
 }
 
 .pricing-cat-img {
@@ -419,18 +419,18 @@ hr {
   margin: auto;
   position: absolute;
   z-index: 2;
-	left: 0; bottom: 0; right: 0;
+  left: 0; bottom: 0; right: 0;
   color: #fff;
   font-size: 1.66666667em;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
 }
 
 .pricing-cat-bg, .partner-cat-bg {
-	position: absolute;
-	width: 100%;
-	height: 50%;
-	background-color: rgba(192,13,13,0.7);
-	bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(192,13,13,0.7);
+  bottom: 0;
 }
 
 .partner-intro {
@@ -457,7 +457,7 @@ hr {
 
 /*community*/
 #community {
-	margin: 80px 0;
+  margin: 80px 0;
 }
 
 .coworker, .friends, .partners {
@@ -465,17 +465,17 @@ hr {
 }
 
 .coworker ul, .friends ul, .partners ul {
-	margin:0;
-	padding:0;
+  margin:0;
+  padding:0;
 }
 
 .coworker ul li, .friends ul li, .partners ul li {
-	list-style: none;
+  list-style: none;
 }
 
 .view {
   width: 20%;
-	height: 0;
+  height: 0;
   padding-bottom: 20%;
   float: left;
   overflow: hidden;
@@ -485,8 +485,8 @@ hr {
 }
 
 .view > * {
-	position: absolute;
-	top: 0; left: 0;
+  position: absolute;
+  top: 0; left: 0;
 }
 
 li.view {
@@ -499,7 +499,7 @@ li.community-cat {
 
 .view .mask, .view .content, .view > a, .view > .comm-head-wrap {
   width: 100%;
-	height: 100%;
+  height: 100%;
 }
 
 .view > a > img {
@@ -553,19 +553,19 @@ li.community-cat {
 }
 
 .partner-img {
-	top: 50%;
-	left: 50%;
+  top: 50%;
+  left: 50%;
   max-width: 100%;
   position: absolute;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .partner-wrap {
-	margin: 10%;
-	min-height: 80%;
-	max-width: 80%;
-	border
+  margin: 10%;
+  min-height: 80%;
+  max-width: 80%;
+  border
 }
 
 .view h2 {
@@ -578,7 +578,7 @@ li.community-cat {
 .community-cat h2, .friends .community-cat h2 {
   color: #fff;
   font-size: 1.66666667em;
-	height: 20%;
+  height: 20%;
   opacity: 1;
   -webkit-transition: none;
   transition: none; 
@@ -649,47 +649,47 @@ li.community-cat {
 iframe, object, embed { width: 100%; }
 
 .map-container {
-	width: 100%;
-	height: 600px;
-	padding: 15px;
-	position: relative;
+  width: 100%;
+  height: 600px;
+  padding: 15px;
+  position: relative;
 }
 
 .contact-info {
-	position: absolute;
-	top: 75px;
-	left: 90px;
-	z-index: 99;
-	width: 300px;
-	height: 135px;rgba(0, 0, 0, 0)
+  position: absolute;
+  top: 75px;
+  left: 90px;
+  z-index: 99;
+  width: 300px;
+  height: 135px;rgba(0, 0, 0, 0)
 }
 
 .logo-container {
-	background: #fff;
-	width: 30%;
-	padding: 35px 10px 10px 10px;
-	min-height: 100%;
+  background: #fff;
+  width: 30%;
+  padding: 35px 10px 10px 10px;
+  min-height: 100%;
 }
 
 .logo-container img {
-	width: 100%;
+  width: 100%;
 }
 
 .info-container {
-	background: rgba(255,255,255,.8);
-	width: 70%;
-	padding: 20px 10px 10px 10px;
-	min-height: 100%;
+  background: rgba(255,255,255,.8);
+  width: 70%;
+  padding: 20px 10px 10px 10px;
+  min-height: 100%;
 }
 
 .info-container p {
-	padding-left: 5px;
-	font-size: 16px;
-	margin: 0 auto
+  padding-left: 5px;
+  font-size: 16px;
+  margin: 0 auto
 }
 
 .info-container a {
-	color: #616161;
+  color: #616161;
 }
 
 footer p, footer a {
@@ -898,110 +898,110 @@ blockquote footer {
 /** Coworker Detail **/
 /* Coworker, Image */
 .cont-cowrk {
-	position: relative;
-	width: 30vw;
-	height: 30vw;
-	margin: 5vw auto 0;
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  margin: 5vw auto 0;
 }
 
 .img-cowrk {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(255,255,255,0.55);
-	z-index: 9;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.55);
+  z-index: 9;
 }
 
 .img-cowrk .img-cowrk-img {
-	position: absolute;
-	width: 85%;
-	height: 85%;
-	margin: 7.5%;
-	z-index: 10;
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  margin: 7.5%;
+  z-index: 10;
 }
 .row {
-	clear: both;	
+  clear: both;  
 }
 /* Portfolio & Galerie, BG */
 #portfolio {
-	position: absolute;
-	width: 100%;
-	height: 20vw;
-	left: 0;
-	right: 0;
-	top: 70px;
+  position: absolute;
+  width: 100%;
+  height: 20vw;
+  left: 0;
+  right: 0;
+  top: 70px;
 }
 
 #gallery-space {
   left: 0;
   position: absolute;
   width: 100vw;
-	z-index: 8;
+  z-index: 8;
 }
 
 .gallery, #gallery-spacer {
-	position: relative;
-	width: 100%;
-	height: 40vw;
-	margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+  height: 40vw;
+  margin-bottom: 80px;
 }
 
 #portfolio ul, #gallery-space ul {
-	position: relative;
-	margin: 0;
-	padding: 0;	
+  position: relative;
+  margin: 0;
+  padding: 0; 
 }
 #portfolio ul li, #gallery-space ul li {
-	list-style: none;	
+  list-style: none; 
 }
 .port-cont {
-	float: left;
-	position: relative;
-	width: 20%;
-	padding-bottom: 20%;
+  float: left;
+  position: relative;
+  width: 20%;
+  padding-bottom: 20%;
 }
 .port-frame {
-	position: absolute;
-	overflow: hidden;
+  position: absolute;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 .port-frame img {
-	width: auto;
+  width: auto;
   max-height: 100%;
 }
 .sechser_ol {
-	opacity: 0;
-	position: absolute;
-	width: 100%;
-	transition: all 0.4s ease 0s;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s ease 0s;
 
 }
 .port-frame:hover .sechser_ol {
-	opacity: 0.55;
-	transition: all 0.4s ease 0s;
+  opacity: 0.55;
+  transition: all 0.4s ease 0s;
 }
 /*Text*/
 #cowrk-desc h1 {
-	font-size: 2.666666666666667em;
-	margin: 0em 0 -0.4em;
+  font-size: 2.666666666666667em;
+  margin: 0em 0 -0.4em;
 }
 #cowrk-desc h2 {
-	font-size: 1.666666666666667em;
-	margin-bottom: 1.5em;
+  font-size: 1.666666666666667em;
+  margin-bottom: 1.5em;
 }
 #cowrk-desc p {
-	margin: 1em;
+  margin: 1em;
 }
 #cowrk-desc hr {
-	margin: 3em -1em;
+  margin: 3em -1em;
 }
 #cowrk-info {
-	padding: 0 1em 3em;	
+  padding: 0 1em 3em; 
 }
 .desc_cont_red {
-	color: #C00D0D;
-	margin-right: 0.2em;
+  color: #C00D0D;
+  margin-right: 0.2em;
 }
 
 /** end Coworker Detail **/
@@ -1102,37 +1102,37 @@ blockquote footer {
   .svg-overlay {
     left: 35%;
   }
-	.contact-info {
-	position: absolute;
-	top: 150px;
-	left: 100px;
-	z-index: 99;
-	width: 400px;
-	height: 135px;
+  .contact-info {
+  position: absolute;
+  top: 150px;
+  left: 100px;
+  z-index: 99;
+  width: 400px;
+  height: 135px;
 }
 
 .logo-container {
-	background: #fff;
-	width: 40%;
-	padding: 10px;
-	min-height: 100%;
+  background: #fff;
+  width: 40%;
+  padding: 10px;
+  min-height: 100%;
 }
 
 .logo-container img {
-	width: 100%;
+  width: 100%;
 }
 
 .info-container {
-	background: rgba(255,255,255,.8);
-	width: 60%;
-	padding: 20px 10px 10px 10px;
-	min-height: 100%;
+  background: rgba(255,255,255,.8);
+  width: 60%;
+  padding: 20px 10px 10px 10px;
+  min-height: 100%;
 }
 
 .info-container p {
-	padding-left: 30px;
-	font-size: 16px;
-	margin: 0 auto
+  padding-left: 30px;
+  font-size: 16px;
+  margin: 0 auto
 }
 }
 
@@ -1166,13 +1166,13 @@ blockquote footer {
 
 /*Font-sizes*/
 @media screen and (max-width: 991px) {
-	html {
-		font-size: 14px;
-	}
+  html {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 460px) {
-	html {
-		font-size: 13px;
-	}
+  html {
+    font-size: 13px;
+  }
 }
