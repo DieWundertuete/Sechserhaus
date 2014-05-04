@@ -133,7 +133,6 @@
 			</div>
 		</div>
 	</div>
-	<div id="carousel-wrap">
 		<!-- Carousel Bilder
 			================================================== -->
 		<div id="Carousel_bilder" class="carousel slide carousel-fade" data-ride="carousel">
@@ -146,29 +145,6 @@
 			<div class="carousel-inner">
 				<div class="item next left">
 					<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
-				</div>
-				<div class="item">
-					<img class="img-responsive parallax" src="img/5.jpg" alt="">
-				</div>
-				<div class="item active left">
-					<img class="img-responsive parallax" src="img/10.jpg" alt="">
-				</div>
-			</div>
-			<!-- <a class="left carousel-control" href="#Carousel_bilder" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-				<a class="right carousel-control" href="#Carousel_bilder" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
-		</div>
-		<!-- /.carousel -->
-		<!-- Carousel Factboxes
-			================================================== -->
-		<div id="Carousel_facts" class="carousel slide carousel-fade" data-ride="carousel">
-			<!-- Indicators
-			<ol class="carousel-indicators">
-				<li data-target="#Carousel_facts" data-slide-to="0" class=""></li>
-				<li data-target="#Carousel_facts" data-slide-to="1" class=""></li>
-				<li data-target="#Carousel_facts" data-slide-to="2" class=""></li>
-			</ol> -->
-			<div class="carousel-inner">
-				<div class="item next left">
 					<div class="container">
 						<div class="carousel-caption">
 							<div class="fact-circle">
@@ -180,6 +156,7 @@
 					</div>
 				</div>
 				<div class="item">
+					<img class="img-responsive parallax" src="img/5.jpg" alt="">
 					<div class="container">
 						<div class="carousel-caption">
 							<div class="fact-circle">
@@ -191,6 +168,7 @@
 					</div>
 				</div>
 				<div class="item active left">
+					<img class="img-responsive parallax" src="img/10.jpg" alt="">
 					<div class="container">
 						<div class="carousel-caption">
 							<div class="fact-circle">
@@ -202,11 +180,10 @@
 					</div>
 				</div>
 			</div>
-			<!-- <a class="left carousel-control" href="#Carousel_facts" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-				<a class="right carousel-control" href="#Carousel_facts" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+			<!-- <a class="left carousel-control" href="#Carousel_bilder" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#Carousel_bilder" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
 		</div>
 		<!-- /.carousel -->
-	</div>
 	<!-- Marketing messaging and featurettes
 			================================================== -->
 	<!-- Wrap the rest of the page in another container to center all the content. -->
@@ -946,12 +923,10 @@
 	</script>
 	<script> //Delay Carousels
 		$(document).ready(function () {
-			$('#Carousel_bilder').carousel({
+			$('.carousel').carousel({
 				pause:'', interval: 2000				
 			});
-			$('#Carousel_facts').carousel({
-				pause:'', interval: 4000				
-			});
+;
 		});
 	</script>
 </body>
