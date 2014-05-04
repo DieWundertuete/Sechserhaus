@@ -1090,3 +1090,80 @@ blockquote footer {
 		font-size: 13px;
 	}
 }
+
+/* Media Queries for Responsiveness Begin */
+/* Mobile */
+@media (min-width: 319px) and (max-width: 480px) {
+
+  .pricing li:first-of-type {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .pricing li {
+    width: 50%;
+    padding-bottom: 50%;
+    height: 0;
+  }
+
+  #pricing-copy {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .pricing-intro {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+    
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .pricing li hr, .partner li hr {
+    width: 16.66666666666667%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .pricing-cat, .partner-cat {
+    height: auto;
+    bottom: 40%;
+  }
+
+  .pricing-cat-bg, .partner-cat-bg {
+    height: 100%;
+  }
+
+  .pricing li:nth-of-type(3n+2), .pricing li:nth-of-type(3n+6), .partner li:nth-of-type(3n+2), .partner li:nth-of-type(3n+6) {
+    background: #fff3e8;
+  }
+
+  .pricing li:nth-of-type(4n+3), .pricing li:nth-of-type(4n+4), .partner li:nth-of-type(4n+3), .partner li:nth-of-type(4n+4) {
+    background: #ffe8d2;
+  }
+
+  .view:first-of-type {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .view{
+    width: 50%;
+    padding-bottom: 50%;
+    height: 0;
+  }
+
+  .view hr {
+    width: 16.66666666666667%;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+}
+/* Media Queries for Responsiveness End */
+
+
