@@ -455,6 +455,45 @@ hr {
   margin-bottom: 40px;
 }
 
+.media .pull-left {
+  margin-top: 35px;
+}
+
+a.date-link:hover {
+  text-decoration: none;
+}
+
+.date.img-circle {
+  background: #c00d0d;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px auto;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Helvetica, Arial, sans-serif;
+}
+
+.date.img-circle span {
+  padding-top: 5px;
+  display: block;
+}
+
+.date-link p {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Helvetica, Arial, sans-serif;
+}
+
+.date-link .month {
+  font-size: 28px;
+}
+
+.date-link .year {
+  font-size: 20px;
+}
+
 /*community*/
 #community {
   margin: 80px 0;
