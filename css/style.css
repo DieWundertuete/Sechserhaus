@@ -182,7 +182,7 @@ body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
   font-size: 1.125em;
   /*font-size: 18px;*/
-  line-height: 1.5555556;
+  line-height: 1.4;
   color: #616161;
   background-color: #fff;
   padding-top: 70px;
@@ -310,6 +310,12 @@ hr {
 
 .affix .navbar-logo {
   opacity: 0;
+  visibility: hidden;
+
+}
+
+.affix-bottom .navbar-logo {
+  display: none;
 }
 
 /* END NAVBAR */
@@ -1193,7 +1199,7 @@ blockquote footer {
 }
 }
 
-@media (min-width: 319px) {
+@media (min-width: 508px) {
   .navbar-header {
           float: left;
   }
@@ -1236,6 +1242,12 @@ blockquote footer {
 
 /* Media Queries for Responsiveness Begin */
 /* Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 319px) and (max-width: 480px) {
 
   .pricing li:first-of-type {
