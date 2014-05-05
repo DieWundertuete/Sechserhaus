@@ -70,8 +70,8 @@
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 60px;
-  height: 600px;
+	height: 600px;
+	margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -82,7 +82,13 @@
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  background-color: #777;
+  /*background-color: #777;*/
+  height: 600px;
+  overflow: hidden;
+}
+
+#Carousel_facts .carousel-inner {
+  /*background-color: #777;*/
   height: 600px;
   overflow: hidden;
 }
@@ -176,7 +182,7 @@ body {
   font-family: 'akzidenz-grotesk_bqregular', Helvetica, Arial, sans-serif;
   font-size: 1.125em;
   /*font-size: 18px;*/
-  line-height: 1.5555556;
+  line-height: 1.4;
   color: #616161;
   background-color: #fff;
   padding-top: 70px;
@@ -304,6 +310,12 @@ hr {
 
 .affix .navbar-logo {
   opacity: 0;
+  visibility: hidden;
+
+}
+
+.affix-bottom .navbar-logo {
+  display: none;
 }
 
 /* END NAVBAR */
@@ -322,6 +334,20 @@ hr {
   color: #fff;
   line-height: 1;
   margin: 0 auto;
+}
+
+.position1 {
+  left: 20%;
+}
+
+.position2 {
+  left: 50%;
+  bottom: 35%;
+}
+
+.position3 {
+  top: 45%;
+  left: 60%;
 }
 
 .fact-content {
@@ -449,6 +475,45 @@ hr {
   margin-bottom: 40px;
 }
 
+.media .pull-left {
+  margin-top: 35px;
+}
+
+a.date-link:hover {
+  text-decoration: none;
+}
+
+.date.img-circle {
+  background: #c00d0d;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 10px auto;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Helvetica, Arial, sans-serif;
+}
+
+.date.img-circle span {
+  padding-top: 5px;
+  display: block;
+}
+
+.date-link p {
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  font-family: 'akzidenz-grotesk_bq_light_cRg', Helvetica, Arial, sans-serif;
+}
+
+.date-link .month {
+  font-size: 28px;
+}
+
+.date-link .year {
+  font-size: 20px;
+}
+
 /*community*/
 #community {
   margin: 80px 0;
@@ -494,6 +559,10 @@ li.community-cat {
 .view .mask, .view .content, .view > a, .view > .comm-head-wrap {
   width: 100%;
   height: 100%;
+}
+
+.view .mask a {
+  text-decoration: none;
 }
 
 .view > a > img {
@@ -1087,7 +1156,6 @@ blockquote footer {
   .carousel {
     height: 750px;
   }
-  
   .carousel .item {
     height: 750px;
   }
@@ -1131,7 +1199,7 @@ blockquote footer {
 }
 }
 
-@media (min-width: 319px) {
+@media (min-width: 508px) {
   .navbar-header {
           float: left;
   }
@@ -1171,3 +1239,84 @@ blockquote footer {
     font-size: 13px;
   }
 }
+
+/* Media Queries for Responsiveness Begin */
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .navbar-brand {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 319px) and (max-width: 480px) {
+
+  .pricing li:first-of-type {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .pricing li {
+    width: 50%;
+    padding-bottom: 50%;
+    height: 0;
+  }
+
+  #pricing-copy {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .pricing-intro {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+    
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .pricing li hr, .partner li hr {
+    width: 16.66666666666667%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .pricing-cat, .partner-cat {
+    height: auto;
+    bottom: 40%;
+  }
+
+  .pricing-cat-bg, .partner-cat-bg {
+    height: 100%;
+  }
+
+  .pricing li:nth-of-type(3n+2), .pricing li:nth-of-type(3n+6), .partner li:nth-of-type(3n+2), .partner li:nth-of-type(3n+6) {
+    background: #fff3e8;
+  }
+
+  .pricing li:nth-of-type(4n+3), .pricing li:nth-of-type(4n+4), .partner li:nth-of-type(4n+3), .partner li:nth-of-type(4n+4) {
+    background: #ffe8d2;
+  }
+
+  .view:first-of-type {
+    width: 100%;
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  .view{
+    width: 50%;
+    padding-bottom: 50%;
+    height: 0;
+  }
+
+  .view hr {
+    width: 16.66666666666667%;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+}
+/* Media Queries for Responsiveness End */

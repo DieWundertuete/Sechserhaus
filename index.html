@@ -30,8 +30,7 @@
 			padding: 0px
 		}
 	</style>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoTW3IdFVkGnEVoao_5PSUf_bZOo1hIus&sensor=true">
-	</script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBoTW3IdFVkGnEVoao_5PSUf_bZOo1hIus&sensor=true"></script>
 	<script type="text/javascript">
 		function initialize() {
 			var MY_MAPTYPE_ID = 'custom_style';
@@ -106,13 +105,13 @@
 <body>
 	<div class="navbar-wrapper">
 		<div class="container">
-			<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation" data-spy="affix" data-offset-top="10">
+			<div class="navbar navbar-default navbar-fixed-top navbar-right" role="navigation" data-spy="affix" data-offset-top="10" data-offset-bottom="20">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
 						</button>
 						<a class="navbar-brand" href="index.html#myCarousel">sechserhaus</a> 
-						<a class="navbar-logo" href="index.html#myCarousel">
+						<a class="navbar-logo hidden-xs" href="index.html#myCarousel">
 							<img src="img/logo_hoch.png" alt="">
 						</a>
 					</div>
@@ -134,57 +133,57 @@
 			</div>
 		</div>
 	</div>
-	<!-- Carousel
-		================================================== -->
-	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#myCarousel" data-slide-to="0" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="1" class=""></li>
-			<li data-target="#myCarousel" data-slide-to="2" class=""></li>
-		</ol>
-		<div class="carousel-inner">
-			<div class="item next left">
-				<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">3000</p>
-							<p class="fact-content">Straßenbahnen, die täglich
-								<br>den Hauptplatz queren</p>
+		<!-- Carousel Bilder
+			================================================== -->
+		<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item next left">
+					<img class="img-responsive parallax" src="img/3.jpg" alt="unser space">
+					<div class="container">
+						<div class="carousel-caption position1">
+							<div class="fact-circle">
+								<p class="fact-heading">3000</p>
+								<p class="fact-content">Straßenbahnen, die täglich
+									<br>den Hauptplatz queren</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img class="img-responsive parallax" src="img/5.jpg" alt="">
+					<div class="container">
+						<div class="carousel-caption position2">
+							<div class="fact-circle">
+								<p class="fact-heading">65</p>
+								<p class="fact-content">Bildschirmdiagonale des Full-
+									<br>HD-Monitors im Studio in Zoll</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item active left">
+					<img class="img-responsive parallax" src="img/10.jpg" alt="">
+					<div class="container">
+						<div class="carousel-caption position3">
+							<div class="fact-circle">
+								<p class="fact-heading">340</p>
+								<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,
+									<br>Bastelplätze und Dusche</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="item">
-				<img class="img-responsive parallax" src="img/5.jpg" alt="">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">65</p>
-							<p class="fact-content">Bildschirmdiagonale des Full-
-								<br>HD-Monitors im Studio in Zoll</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="item active left">
-				<img class="img-responsive parallax" src="img/10.jpg" alt="">
-				<div class="container">
-					<div class="carousel-caption">
-						<div class="fact-circle">
-							<p class="fact-heading">340</p>
-							<p class="fact-content">Quadratmeter des Sechserhaus, inklusive Briefing-Lounge,
-								<br>Bastelplätze und Dusche</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
 		</div>
-		<!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
-	</div>
-	<!-- /.carousel -->
+		<!-- /.carousel -->
 	<!-- Marketing messaging and featurettes
 			================================================== -->
 	<!-- Wrap the rest of the page in another container to center all the content. -->
@@ -205,7 +204,7 @@
 								<h4 class="media-heading">Weit hinten, hinter den Wortbergen</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
-							<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> 
+							<a href="blogpost.html" class="btn btn-primary">more</a> 
 						</div>
 					</li>
 					<li class="media">
@@ -218,7 +217,7 @@
 								<h4 class="media-heading">Die Hügel des Kursivgebirges</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
-							<a href="blogpost.html" class="btn btn-primary">weiterlesen</a> 
+							<a href="blogpost.html" class="btn btn-primary">more</a> 
 						</div>
 					</li>
 				</ul>
@@ -229,8 +228,10 @@
 				<!-- events -->
 				<ul class="media-list event">
 					<li class="media">
-						<a class="pull-left" href="#">
-							<img class="media-object img-circle" src="img/portrait_03.jpg" style="width: 64px; height: 64px;">
+						<a class="pull-left date-link" href="#">
+							<div class="media-object date img-circle"><span>24.</span></div>
+							<p class="month">MAI</p>
+							<p class="year">2014</p>
 						</a>
 						<div class="media-body">
 							<p class="post-meta">sechserhaus-event</p>
@@ -238,12 +239,14 @@
 								<h4 class="media-heading">Linolschnitt-Workshop im sechserhaus</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
-							<a href="blogpost.html" class="btn btn-primary">mehr infos</a> 
+							<a href="blogpost.html" class="btn btn-primary">more</a> 
 						</div>
 					</li>
 					<li class="media">
-						<a class="pull-left" href="#">
-							<img class="media-object img-circle" src="img/portrait_04.jpg" style="width: 64px; height: 64px;">
+						<a class="pull-left date-link" href="#">
+							<div class="media-object date img-circle"><span>24.</span></div>
+							<p class="month">JUN</p>
+							<p class="year">2014</p>
 						</a>
 						<div class="media-body">
 							<p class="post-meta">sechserhaus-event</p>
@@ -251,7 +254,7 @@
 								<h4 class="media-heading">Kühle Drinks beim Sommerfest</h4>
 							</a>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, vel sunt ad eum laudantium molestias accusantium voluptatem doloremque nisi itaque! Aliquid, iusto error blanditiis modi nobis hic veritatis sint voluptatum.</p>
-							<a href="blogpost.html" class="btn btn-primary">mehr infos</a> 
+							<a href="blogpost.html" class="btn btn-primary">more</a> 
 						</div>
 					</li>
 				</ul>
@@ -722,16 +725,16 @@
 								</div>
 							</li>
 							<li class="view">
-								<div class="partner-wrap"><img class="partner-img" src="img/10.jpg" alt="" /></div>
+								<div class="partner-wrap"><img class="partner-img" src="img/ipunkt-logo.png" alt="" /></div>
 							</li>
 							<li class="view">
-								<div class="partner-wrap"><img class="partner-img" src="img/2.jpg" alt="" /></div>
+								<div class="partner-wrap"><img class="partner-img" src="img/no-sun-logo.png" alt="" /></div>
 							</li>
 							<li class="view">
-								<div class="partner-wrap"><img class="partner-img" src="img/3.jpg" alt="" /></div>
+								<div class="partner-wrap"><img class="partner-img" src="img/fh-joanneum-logo.png" alt="" /></div>
 							</li>
 							<li class="view">
-								<div class="partner-wrap"><img class="partner-img" src="img/8.jpg" alt="" /></div>
+								<div class="partner-wrap"><img class="partner-img" src="img/wundertuete-logo.png" alt="" /></div>
 							</li>
 						</ul>
 					</div>
@@ -779,21 +782,21 @@
 		<!-- FOOTER -->
 		<footer>
 			<div class="col-sm-10 col-sm-offset-1">
-				<div class="col-sm-4">
+				<div class="col-xs-4">
 					<p>&copy; 2014 sechserhaus - creative coworking space</p>
 				</div>
-				<div class="col-sm-4 social-media-bar text-center">
+				<div class="col-xs-4 social-media-bar text-center">
 					<a href="#">
-						<img src="img/facebook.jpg" alt="facebook">
+						<img src="img/facebook.png" alt="facebook">
 					</a>
 					<a href="">
-						<img src="img/youtube.jpg" alt="youtube">
+						<img src="img/youtube.png" alt="youtube">
 					</a>
 					<a href="">
-						<img src="img/google.jpg" alt="google">
+						<img src="img/google.png" alt="google">
 					</a>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-xs-4">
 					<p><a href="#">Impressum</a> · <a href="#">AGB</a> · <a href="#">FAQ</a> · <a href="#">Kontakt</a>
 					</p>
 				</div>
@@ -921,6 +924,14 @@
 		 */
 		var scroller = new Scroller();
 		scroller.init();
+	</script>
+	<script> //Delay Carousels
+		$(document).ready(function () {
+			$('.carousel').carousel({
+				pause:'', interval: 5000				
+			});
+;
+		});
 	</script>
 </body>
 
