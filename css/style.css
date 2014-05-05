@@ -330,6 +330,20 @@ hr {
   margin: 0 auto;
 }
 
+.position1 {
+  left: 20%;
+}
+
+.position2 {
+  left: 50%;
+  bottom: 35%;
+}
+
+.position3 {
+  top: 45%;
+  left: 60%;
+}
+
 .fact-content {
   font-size: 0.77777778em;
   margin: 0;
