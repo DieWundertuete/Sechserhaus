@@ -502,6 +502,10 @@ li.community-cat {
   height: 100%;
 }
 
+.view .mask a {
+  text-decoration: none;
+}
+
 .view > a > img {
   display: block;
   position: relative;
