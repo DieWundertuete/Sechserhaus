@@ -11,6 +11,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/ekko-lightbox.css" rel="stylesheet">
 	<!-- Just for debugging purposes. Don't actually copy this line! -->
 	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -267,61 +268,62 @@
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/1.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/1.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/1.jpg" /></a>
+							 </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/4.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/4.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="Yeah footer supergeil" data-parent><img src="img/4.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/7.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/7.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/7.jpg" /></a></div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/3.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/3.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/3.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/8.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/8.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/8.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/11.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/11.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/11.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/14.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/14.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/14.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/17.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/17.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/17.jpg" /></a></div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/13.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/13.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/13.jpg" /></a> </div>
 					</li>
 					<li class="port-cont">
 						<div class="port-frame">
 							<object type="image/svg+xml" data="img/sechserhaus_ol.svg" class='sechser_ol'>
 							</object>
-							<img src="img/18.jpg" /> </div>
+							<a href="http://127.0.0.1/sechserhaus_git/img/18.jpg" data-toggle="lightbox" data-gallery="multiimages" data-footer="People walking down stairs" data-parent><img src="img/18.jpg" /></a> </div>
 					</li>
 				</ul>
 			</div>
@@ -795,6 +797,7 @@
 	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/ekko-lightbox.min.js"></script>
 	<script src="js/jquery.scrollTo.min.js"></script>
 	<script src="js/jquery.localScroll.min.js"></script>
 	<script>
@@ -804,6 +807,10 @@
 			//				$('.parallax').css('top', parseInt(-x / 8) + 'px');
 			//			});
 			$('.navbar').localScroll();
+			$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+			    event.preventDefault();
+			    $(this).ekkoLightbox();
+			}); 
 		});
 	</script>
 	<script>
