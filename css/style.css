@@ -416,10 +416,18 @@ hr {
   overflow: hidden;
 }
 
-.pricing-wrap, .partner-wrap {
+.pricing-wrap, .partner-wrap  {
   position: absolute;
-  width: 100%; height: 84%;
-  margin: 8% 0;
+  width: 84%;
+}
+
+.pricing-wrap {
+  left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.pricing-wrap hr, .partner-wrap hr, .mask hr {
+	margin: 1em auto;
 }
 
 .pricing-cat-img {
@@ -434,11 +442,9 @@ hr {
 
 .pricing-cat, .partner-cat {
   width: 100%;
-  height: 50%;
   margin: auto;
   position: absolute;
   z-index: 2;
-  left: 0; bottom: 0; right: 0;
   color: #fff;
   font-size: 1.66666667em;
   font-family: 'akzidenz-grotesk_bq_light_cRg', Arial, Helvetica, sans-serif;
@@ -562,6 +568,9 @@ li.community-cat {
 
 .view .mask a {
   text-decoration: none;
+	width: 90%;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .view > a > img {
@@ -596,9 +605,11 @@ li.community-cat {
   text-decoration: underline;
 }
 
-.view .mask{ 
+.view a .mask { 
+	position: absolute;
+	top: 0; left: 0;
   background-color: rgba(192,13,13,.75);
-  opacity:0;
+  opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -614,12 +625,10 @@ li.community-cat {
 }
 
 .partner-img {
-  top: 50%;
-  left: 50%;
   max-width: 100%;
   position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	left: 50%; top: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .partner-wrap {
@@ -646,7 +655,6 @@ li.community-cat {
 
 .view hr {
   width: 25px;
-  margin: 20px auto;
   border-color: #fff;
 }
 
@@ -664,9 +672,14 @@ li.community-cat {
 
 .mask h2 {
 	font-size: 1.5em;
+	margin: 0.2em 0;
 }
 
-.view:hover .mask {  
+.mask div {
+	width: 100%;
+}
+
+.view:hover a .mask {  
   opacity:1; 
 }                                                                            
 
@@ -1244,6 +1257,9 @@ blockquote footer {
   html {
     font-size: 14px;
   }
+	.no-display991 {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 460px) {
@@ -1263,7 +1279,8 @@ blockquote footer {
 	}
 }
 
-@media (min-width: 319px) and (max-width: 480px) {
+/*@media (min-width: 319px) and (max-width: 480px) {*/
+@media (max-width: 480px) {
 	.fact-content {
 		bottom: 25%;
 		padding: 0 2em;
@@ -1313,5 +1330,8 @@ blockquote footer {
     margin-top: 8px;
     margin-bottom: 5px;
   }
+	.no-display991 {
+		display:block;
+	}
 }
 /* Media Queries for Responsiveness End */
