@@ -6,4 +6,8 @@
 <file name="bootstrap.min.js" server="C:/.xampp/htdocs" local="130429773345742329" remote="130429773340000000" Dst="2" />
 <file name="jquery.scrollTo.min.js" server="C:/.xampp/htdocs" local="130433152538801518" remote="130433152530000000" Dst="2" />
 <file name="jquery.localScroll.min.js" server="C:/.xampp/htdocs" local="130433152538791518" remote="130433152530000000" Dst="2" />
+<file name="bootstrap.min.js" server="C:/.xampp/htdocs/" local="130429773345742329" remote="130429773340000000" Dst="2" />
+<file name="ekko-lightbox.min.js" server="C:/.xampp/htdocs/" local="130441844675865292" remote="130441844670000000" Dst="2" />
+<file name="jquery.scrollTo.min.js" server="C:/.xampp/htdocs/" local="130433152538801518" remote="130433152530000000" Dst="2" />
+<file name="jquery.localScroll.min.js" server="C:/.xampp/htdocs/" local="130433152538791518" remote="130433152530000000" Dst="2" />
 </dwsync>
